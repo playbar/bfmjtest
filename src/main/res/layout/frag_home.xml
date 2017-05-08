@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/video_viewpager"
+            android:paddingTop="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/home_title_layout"
+            android:layout_width="match_parent"
+            android:background="@color/app_white_title_bg"
+            android:layout_height="@dimen/public_title_height">
+
+            <com.baofeng.mj.ui.view.TabContainer
+                android:id="@+id/video_radiogroup"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:weightSum="3"
+                android:padding="10dp"
+                android:layout_marginRight="60dp"
+                android:orientation="horizontal" />
+
+            <com.baofeng.mj.ui.view.AppTitleView
+                android:id="@+id/video_title_icon_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/public_title_height"/>
+        </LinearLayout>
+
+        <!--<RadioGroup-->
+        <!--android:id="@+id/video_radiogroup"-->
+        <!--android:layout_below="@id/video_title_icon_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:background="@color/app_translucent_color"-->
+
+        <!--android:gravity="center"-->
+        <!--android:orientation="horizontal" />-->
+
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_marginTop="88dp"-->
+        <!--android:background="@color/bg_color"/>-->
+
+    </RelativeLayout>
+
+    <com.baofeng.mj.ui.view.EmptyView
+        android:visibility="gone"
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frag_choiceness_wrapper"
+    android:background="@color/bg_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/frag_choiceness_content"
+        android:id="@+id/live_video_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp" />
+
+    <!--<com.baofeng.mj.ui.view.CustomProgressView-->
+        <!--android:id="@+id/choiceness_loading"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:visibility="gone"/>-->
+
+    <com.baofeng.mj.ui.view.EmptyView
+        android:visibility="gone"
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

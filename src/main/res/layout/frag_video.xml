@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/video_viewpager"
+            android:paddingTop="73.33dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.baofeng.mj.ui.view.AppTitleView
+            android:id="@+id/video_title_icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:layout_height="@dimen/public_main_title_height"/>
+
+        <RelativeLayout
+            android:id="@+id/video_title_bg_layout"
+            android:layout_below="@id/video_title_icon_layout"
+            android:background="#E6f3f3f4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <HorizontalScrollView
+                android:id="@+id/video_title_scroll"
+                android:layout_width="match_parent"
+                android:scrollbars="none"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/video_title_linear_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <com.baofeng.mj.ui.view.TabContainer
+                        android:id="@+id/video_radiogroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="33.33dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/video_more_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:src="@drawable/tab_icon_more"/>
+
+            <ImageView
+                android:id="@+id/video_more_imageview_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/video_more_imageview"
+                android:src="@drawable/tab_more_bg"/>
+        </RelativeLayout>
+        <View
+            android:id="@+id/video_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:layout_below="@id/video_title_bg_layout"
+            android:background="@color/divider_color" />
+
+    </RelativeLayout>
+
+    <com.baofeng.mj.ui.view.EmptyView
+        android:visibility="gone"
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

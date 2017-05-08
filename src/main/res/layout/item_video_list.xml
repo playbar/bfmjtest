@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" >
+
+        <ImageView
+            android:id="@+id/item_video_bg_image"
+            android:layout_width="315dp"
+            android:layout_height="182dp"
+            android:layout_gravity="center" />
+        
+        <ImageView
+            android:id="@+id/item_video_bg_grey"
+            android:layout_width="315dp"
+            android:layout_height="182dp"
+            android:background="@drawable/grey_darkgrey_bg_selector"
+            android:layout_gravity="center" />
+        
+        <ImageView
+            android:id="@+id/item_video_play_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/help_play_bg" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/item_video_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:textColor="@android:color/darker_gray"
+        android:text="遥控器连接"
+        android:textSize="16sp" />
+
+</LinearLayout>

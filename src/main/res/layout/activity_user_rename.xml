@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <com.baofeng.mj.ui.view.TitleBar
+        android:id="@+id/rl_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/public_title_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_white_title_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl_title_bar"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/change_nick_name"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <com.baofeng.mj.ui.view.ClearableEditText
+            android:id="@+id/et_nick_name"
+            style="@style/common_edit_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_nick_name"
+            android:background="@android:color/transparent"
+            android:hint="@string/input_nick_name"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

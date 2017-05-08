@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.baofeng.mj.ui.online.view.SystemPlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/top_layer"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/top_layer_2"
+        android:background="#4c000000"
+        />
+
+    <com.baofeng.mj.ui.online.view.PlayerCenterLine
+        android:layout_width="match_parent"
+        android:id="@+id/center_line"
+        android:visibility="gone"
+        android:layout_height="match_parent" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="45dp">
+    <TextView
+        android:id="@+id/player_preview_btn"
+        android:layout_width="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:background="@drawable/player_preview_bg_selector"
+        android:textColor="@drawable/player_preview_textcolor_selector"
+        android:drawableRight="@drawable/player_preview_img_selector"
+        android:layout_marginRight="13dp"
+        android:drawablePadding="6dp"
+        android:visibility="gone"
+        android:text="预览" />
+        </RelativeLayout>
+    <com.baofeng.mj.ui.online.view.BottomContrallerView
+        android:id="@+id/layout_bottomview"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"/>
+
+
+    <com.baofeng.mj.ui.online.view.LoadingView
+        android:id="@+id/loadingvew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        />
+
+    <com.baofeng.mj.ui.online.view.PlaySelectPopupWindow
+        android:layout_width="173.3dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/playseletview"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        />
+    <com.baofeng.mj.ui.online.view.ExceptionDialogView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/player_exception_dialog"
+        android:visibility="gone"
+        />
+
+
+
+
+
+</RelativeLayout>

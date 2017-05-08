@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/search_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/public_title_height"
+        android:background="@color/app_white_title_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.baofeng.mj.ui.view.ClearableEditText
+            android:id="@+id/key_word"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="#ededed"
+            android:drawableLeft="@drawable/recommend_icon_search"
+            android:drawablePadding="6.67dp"
+            android:hint="@string/search_hint"
+            android:singleLine="true"
+            android:paddingLeft="6.67dp"
+            android:paddingRight="6.67dp"
+            android:maxLength="18"
+            android:textColor="#999999"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#333"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/key_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/his_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13.3dp"
+            android:text="搜索历史"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/his_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="13.3dp"
+            android:text="清除记录"
+            android:textColor="@color/theme_main_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/divider_line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:layout_below="@id/his_title"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/divider_color" />
+
+
+        <com.baofeng.mj.ui.view.CustomViewGroup
+            android:id="@+id/his_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider_line1" />
+
+        <TextView
+            android:id="@+id/divider_view"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@id/his_group"
+            android:background="#cccccc" />
+
+        <TextView
+            android:id="@+id/hot_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider_view"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13.3dp"
+            android:text="热门搜索"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/divider_line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:layout_below="@id/hot_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/divider_color" />
+
+        <ListView
+            android:id="@+id/hot_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hot_title"
+            android:divider="@color/white"
+            android:dividerHeight="13.33dp"
+            android:paddingBottom="13.33dp"
+            android:paddingTop="13.33dp" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/search_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/video_tab"
+            style="@style/charge_tab_text_style"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="0.33dp"
+            android:layout_height="match_parent"
+            android:background="@color/divider_color" />
+
+        <RadioButton
+            android:id="@+id/game_tab"
+            style="@style/charge_tab_text_style"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/search_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</LinearLayout>

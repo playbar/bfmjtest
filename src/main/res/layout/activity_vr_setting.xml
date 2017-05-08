@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    style="@style/app_backgroud_pic">
+
+    <com.baofeng.mj.ui.view.AppTitleBackView
+        android:id="@+id/vr_setting_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white_title_bg" />
+
+    <!-- 头戴式设备-->
+    <RelativeLayout
+        android:id="@+id/device_select_layout"
+        style="@style/public_account_list_style">
+
+        <TextView
+            style="@style/public_account_list_text_style"
+            android:layout_marginLeft="20dp"
+            android:text="@string/vr_setting_device" />
+
+        <TextView
+            android:id="@+id/vr_device_name"
+            style="@style/public_account_list_text_style2"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/vr_setting_device_next" />
+
+        <ImageView
+            android:id="@+id/vr_setting_device_next"
+            style="@style/public_account_list_arrow_style" />
+    </RelativeLayout>
+
+
+    <View
+        style="@style/app_backgroud_pic"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <!-- 魔镜体感手柄-->
+    <RelativeLayout
+        android:id="@+id/body_feeling_handle_layout"
+        style="@style/public_account_list_style">
+
+        <TextView
+            style="@style/public_account_list_text_style"
+            android:layout_marginLeft="20dp"
+            android:text="@string/vr_setting_body_feeling_handle" />
+
+        <TextView
+            android:id="@+id/body_feeling_handle_text"
+            style="@style/public_account_list_text_style2"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/vr_setting_feeling_handle_next"
+            android:text="查看连接说明"/>
+
+        <ImageView
+            android:id="@+id/vr_setting_feeling_handle_next"
+            style="@style/public_account_list_arrow_style" />
+    </RelativeLayout>
+
+    <View
+        style="@style/public_setting_list_line_style"
+        android:layout_gravity="center" />
+
+    <!-- 左手模式-->
+    <RelativeLayout
+        android:id="@+id/left_mode_layout"
+        style="@style/public_account_list_style"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+            <TextView
+                style="@style/public_account_list_text_style"
+                android:text="@string/vr_setting_left_mode"/>
+
+            <TextView
+                style="@style/public_account_list_text_style"
+                android:text="@string/vr_setting_left_mode_explain" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/is_left_checkBox"
+            style="@style/public_account_list_text_style2"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/vr_setting_left_mode_selector"
+            android:button="@null"/>
+
+    </RelativeLayout>
+
+    <View
+        style="@style/public_setting_list_line_style"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <!-- 普通手柄-->
+
+    <RelativeLayout
+        android:id="@+id/common_handle_layout"
+        style="@style/public_account_list_style">
+
+        <TextView
+            style="@style/public_account_list_text_style"
+            android:layout_marginLeft="20dp"
+            android:text="@string/vr_setting_common_handle" />
+
+        <TextView
+            android:id="@+id/common_handle_text"
+            style="@style/public_account_list_text_style2"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/vr_setting_common_handle_next"
+            android:text="查看连接说明"/>
+
+        <ImageView
+            android:id="@+id/vr_setting_common_handle_next"
+            style="@style/public_account_list_arrow_style" />
+    </RelativeLayout>
+
+    <View
+        style="@style/app_backgroud_pic"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <!-- 显示效果-->
+    <RelativeLayout
+        android:id="@+id/vr_setting_show"
+        style="@style/public_account_list_style">
+
+        <TextView
+            style="@style/public_account_list_text_style"
+            android:layout_marginLeft="20dp"
+            android:text="@string/vr_setting_show" />
+
+
+        <ImageView
+            style="@style/public_account_list_arrow_style" />
+    </RelativeLayout>
+
+    <View
+        style="@style/public_setting_list_line_style"
+        android:layout_gravity="center" />
+
+    <!--手机屏幕尺寸选择-->
+    <RelativeLayout
+        android:id="@+id/device_screen_select_layout"
+        style="@style/public_account_list_style">
+
+        <TextView
+            style="@style/public_account_list_text_style"
+            android:layout_marginLeft="20dp"
+            android:text="@string/vr_setting_phone_screen_select" />
+
+        <TextView
+            android:id="@+id/vr_device_screen_name"
+            style="@style/public_account_list_text_style2"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/vr_setting_device_screen__next" />
+
+        <ImageView
+            android:id="@+id/vr_setting_device_screen__next"
+            style="@style/public_account_list_arrow_style" />
+    </RelativeLayout>
+
+
+</LinearLayout>

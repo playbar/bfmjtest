@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/panorama_rec_img"
+        android:layout_width="118.33dp"
+        android:layout_height="66.67dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_default_2n_cross" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/panorama_rec_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            style="@style/panorama_detail_title_text_style"
+            android:textStyle="bold"
+            android:text="123" />
+
+        <TextView
+            android:id="@+id/panorama_rec_subname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/panorama_detail_sub_text_style"
+            android:layout_marginTop="10dp"
+            android:text="456"/>
+
+    </LinearLayout>
+
+</LinearLayout>

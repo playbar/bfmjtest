@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_backgroud_pic">
+
+    <com.baofeng.mj.ui.view.TitleBar
+        android:id="@+id/rl_recharge_record_title"
+        style="@style/app_title_style"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_white_title_bg" />
+    <!--没有充值记录-->
+    <RelativeLayout
+        android:id="@+id/rl_no_recharge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_recharge_record_title"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_no_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_no_recharge"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="23.3dp"
+            android:src="@drawable/no_recharge_record" />
+
+        <TextView
+            android:id="@+id/tv_no_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/no_recharge_record"
+            android:textSize="@dimen/bar_text_size" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_recharge_record"
+        style="@style/res_recharge_list_style"
+        android:layout_below="@+id/rl_recharge_record_title" />
+
+
+</RelativeLayout>

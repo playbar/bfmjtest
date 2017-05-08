@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <!--主页面-->
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rl_fly_screen_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray_ef"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_fly_screen_name"
+                style="@style/wrap_content_style"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/content_text_size" />
+
+            <ImageView
+                android:id="@+id/iv_common_problem"
+                style="@style/wrap_content_style"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/img_common_problem" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listview_device"
+            style="@style/res_normal_flylist_style"
+            android:layout_below="@+id/rl_fly_screen_title" />
+
+        <TextView
+            android:id="@+id/tv_fly_screen_parent_dir"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/rl_fly_screen_title"
+            android:background="@drawable/app_translucent_listview_selector"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="返回上一级"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/content_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/tv_fly_screen_parent_dir"
+            android:background="@color/divider_color" />
+
+        <ListView
+            android:id="@+id/listview_folder"
+            style="@style/res_normal_flylist_style"
+            android:layout_below="@+id/tv_fly_screen_parent_dir" />
+    </RelativeLayout>
+
+    <!--帮助页面-->
+    <com.baofeng.mj.ui.view.FlyScreenGuideView
+        android:id="@+id/rl_fly_screen_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!--扫描等待-->
+    <include layout="@layout/fly_screen_progress_bar"></include>
+
+    <!--设备没有找到-->
+    <RelativeLayout
+        android:id="@+id/rl_fly_screen_not_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="27dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/fly_screen_not_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/fly_screen_not_found" />
+
+        <TextView
+            android:id="@+id/tv_no_device"
+            style="@style/wrap_content_style"
+            android:layout_below="@+id/fly_screen_not_found"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            android:text="@string/device_not_found"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/tv_no_device_confirm"
+            style="@style/wrap_content_style"
+            android:layout_below="@+id/tv_no_device"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="@string/please_confirm"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/tv_fly_screen_hint1"
+            style="@style/wrap_content_style"
+            android:layout_alignLeft="@+id/tv_fly_screen_hint2"
+            android:layout_below="@+id/tv_no_device_confirm"
+            android:layout_marginTop="7dip"
+            android:text="@string/computer_installed_fly_screen"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/tv_fly_screen_hint2"
+            style="@style/wrap_content_style"
+            android:layout_below="@+id/tv_fly_screen_hint1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dip"
+            android:text="@string/computer_mobile_in_same_lan"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/tv_rescan"
+            style="@style/wrap_content_style"
+            android:layout_below="@+id/tv_fly_screen_hint2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/corner_btn_purple_bg"
+            android:paddingBottom="10dip"
+            android:paddingLeft="40dip"
+            android:paddingRight="40dip"
+            android:paddingTop="10dip"
+            android:text="@string/rescan"
+            android:textColor="@color/fly_screen_play_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/tv_common_problem"
+            style="@style/wrap_content_style"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="17dp"
+            android:drawableLeft="@drawable/img_common_problem"
+            android:drawablePadding="7dp"
+            android:text="@string/common_problem"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/btn_text_size" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

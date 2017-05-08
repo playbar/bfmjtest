@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/help_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/public_title_height"
+        android:background="@color/guide_purple_bg"
+        android:text="@string/help_title"
+        android:paddingLeft="16.67dp"
+        android:textColor="@color/white"
+        android:gravity="left|center"
+        android:textSize="16sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="50dp"
+        android:layout_below="@id/help_list_title">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/guide_help_normal_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/view_help_normal"/>
+
+            <include
+                android:id="@+id/guide_help_fivegener_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                layout="@layout/view_help_fivegener"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/guide_begin_btn"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
+        android:text="@string/guide_start_now"
+        android:gravity="center"
+        android:drawablePadding="10dp"
+        android:textSize="16sp"
+        android:background="@color/guide_purple_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+
+</RelativeLayout>
+
+

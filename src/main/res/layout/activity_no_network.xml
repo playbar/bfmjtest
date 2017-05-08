@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    style="@style/app_backgroud_pic"
+    android:orientation="vertical">
+
+    <com.baofeng.mj.ui.view.AppTitleBackView
+        android:id="@+id/network_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white_title_bg"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            style="@style/public_account_list_text_style"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="当前手机无网络连接，请尝试以下方法解决" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            style="@style/public_account_list_text_style"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="1.确保手机的【wifi】开关为开启状态，并且已经连接到了正确的热点" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        style="@style/public_account_list_text_style"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="2.确保手机设置中【蜂窝移动网络】已打开，并且已经在运营商开通了相应的流量服务" />
+
+    <TextView
+        android:layout_marginTop="80dp"
+        style="@style/public_account_list_text_style"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="若无法解决你的问题，请详细描述你的问题，我们会及时跟进解决" />
+
+    <TextView
+        android:id="@+id/no_network_help"
+        android:layout_marginTop="20dp"
+        style="@style/public_account_list_text_style"
+        android:layout_gravity="center"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/theme_main_color"
+        android:background="@drawable/corner_purple_bg"
+        android:text="意见反馈" />
+
+</LinearLayout>

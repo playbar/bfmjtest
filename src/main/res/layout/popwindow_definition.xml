@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_translucent_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="请选择要下载的画质"
+            android:gravity="center"
+            android:textColor="@color/content_color"
+            android:id="@+id/definition_choice_textview"/>
+
+        <ListView
+            android:id="@+id/pop_definition_listview"
+            android:dividerHeight="0dp"
+            android:divider="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/definition_cancel_textview"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/prompt_color"
+            android:gravity="center"
+            android:text="取消" />
+    </LinearLayout>
+
+</RelativeLayout>

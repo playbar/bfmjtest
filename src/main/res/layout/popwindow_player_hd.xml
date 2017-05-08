@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <ListView
+        android:id="@+id/video_hd_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@null"
+        android:divider="#33ffffff"
+        android:dividerHeight="1dp"
+        android:scrollbars="none"
+        android:listSelector="@color/transparent" />
+</RelativeLayout>

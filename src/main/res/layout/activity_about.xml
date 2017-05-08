@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <com.baofeng.mj.ui.view.AppTitleBackView
+        android:id="@+id/about_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white_title_bg" />
+
+    <ImageView
+        android:id="@+id/about_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="148dp"
+        android:src="@drawable/my_about_img_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/version_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="23.3dp"
+            android:text=""
+            android:textColor="@color/prompt_color"
+            android:textSize="13.3sp" />
+
+        <TextView
+            android:id="@+id/version_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="23.3dp"
+            android:text=""
+            android:textColor="@color/prompt_color"
+            android:textSize="13.3sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:id="@+id/right_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="56.7dp"
+            android:gravity="center"
+            android:text="Copyright @ 2016 Magiclens.All rights reserved."
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/content_text_size" />
+
+        <TextView
+            android:id="@+id/mj_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/right_tag"
+            android:gravity="center"
+            android:paddingBottom="16.7dp"
+            android:text="暴风魔镜 版权所有"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/content_text_size" />
+
+        <TextView
+            android:id="@+id/sdk_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/mj_tag"
+            android:gravity="center"
+            android:paddingBottom="16.7dp"
+            android:text=""
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/content_text_size" />
+
+        <TextView
+            android:id="@+id/model_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/sdk_tag"
+            android:gravity="center"
+            android:paddingBottom="8dp"
+            android:text=""
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/warn_text_size" />
+    </RelativeLayout>
+
+</LinearLayout>

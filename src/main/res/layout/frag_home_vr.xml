@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:id="@+id/home_vr_title_scroll"
+        android:layout_width="wrap_content"
+        android:scrollbars="none"
+        android:paddingRight="30dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.baofeng.mj.ui.view.TabContainer
+                android:id="@+id/home_vr_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/app_translucent_color"
+                android:orientation="horizontal" />
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <ImageView
+        android:id="@+id/home_vr_more_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/tab_more_bg"/>
+
+    <View
+        android:id="@+id/home_vr_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.33dp"
+        android:layout_below="@id/home_vr_title_scroll"
+        android:background="@color/divider_color" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/home_vr_viewpager"
+        android:layout_below="@id/home_vr_line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.baofeng.mj.ui.view.EmptyView
+        android:id="@+id/home_vr_empty_view"
+        android:visibility="gone"
+        android:layout_below="@id/home_vr_title_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

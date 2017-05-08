@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.PullToRefreshMyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/live_content_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:scrollbars="none"
+    ptr:ptrAnimationStyle="flip"
+    ptr:ptrHeaderBackground="@color/app_pulltorefresh_green"
+    ptr:ptrMode="disabled">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/live_detail_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_default_banner"
+                android:orientation="vertical"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/live_detail_name_textview"
+                style="@style/panorama_detail_title_text_style"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/title_color"
+                android:text="星际迷航超感体验"/>
+
+            <TextView
+                android:id="@+id/live_detail_grade_textview"
+                style="@style/panorama_detail_title_text_style"
+                android:layout_toRightOf="@id/live_detail_name_textview"
+                android:textColor="@color/auxiliary_yellow_color"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:textStyle="bold"
+                android:text="9.2分"/>
+
+            <LinearLayout
+                android:id="@+id/live_detail_duration_layout"
+                android:layout_below="@id/live_detail_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/live_detail_duration_textview_pre"
+                    style="@style/panorama_detail_sub_text_style"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="直播"/>
+
+                <TextView
+                    android:id="@+id/live_detail_duration_textview"
+                    style="@style/panorama_detail_sub_text_style"
+                    android:paddingTop="10dp"
+                    android:paddingRight="10dp"
+                    android:text="30分钟"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/live_detail_begin_textview_pre"
+                style="@style/panorama_detail_sub_text_style"
+                android:layout_below="@id/live_detail_duration_layout"
+                android:paddingTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="开始时间"/>
+
+            <TextView
+                android:id="@+id/live_detail_begin_textview"
+                style="@style/panorama_detail_sub_text_style"
+                android:layout_below="@id/live_detail_duration_layout"
+                android:layout_toRightOf="@id/live_detail_begin_textview_pre"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:text="5月5日 17：00"/>
+
+            <LinearLayout
+                android:id="@+id/live_detail_play_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/live_detail_begin_textview_pre"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/live_detail_play_btn"
+                    style="@style/panorama_detail_play_btn_style"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/grey_purple_corner_bg_color"
+                    android:textColor="@color/grey_purple_enable_bg_color"
+                    android:text="立即查看播放" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/live_detail_pay_layout"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp"
+                android:layout_below="@id/live_detail_begin_textview_pre"
+                android:background="@drawable/corner_purple_bg"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/live_detail_pay_btn"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.33sp"
+                    android:gravity="right"
+                    android:textColor="@color/theme_main_color"
+                    android:text="付费播放" />
+                <TextView
+                    android:id="@+id/live_detail_pay_count"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="9.33sp"
+                    android:textColor="@color/prompt_color"
+                    android:text="（10魔豆）" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            style="@style/public_line_style"/>
+
+        <TextView
+            style="@style/detail_title_text_style"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="简介"/>
+
+        <TextView
+            android:id="@+id/live_detail_brief_textview"
+            style="@style/panorama_detail_sub_des_text_style"
+            android:padding="10dp"
+            android:gravity="left"
+            android:singleLine="false"
+            android:lineSpacingExtra="5dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="虚拟现实技术是一种可以创建和体验虚拟世界的计算机仿真系统它利用计算机生成一种模拟环境是一种多源信息融合的交互式的三维动态视景和实体行为的系统仿真使用户沉浸到该环境中。"/>
+    </LinearLayout>
+</com.handmark.pulltorefresh.library.PullToRefreshMyScrollView>
+

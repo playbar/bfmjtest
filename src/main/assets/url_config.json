@@ -1,0 +1,12 @@
+{
+    "horizon":
+    {
+        "hostname":"res.static.mojing.cn",
+        "nav_enter":"1/new_nav.js"
+    },
+    "vertical":
+    {
+        "hostname":"res.static.mojing.cn",
+        "nav_enter":"1/entry_nav_datapi.js"
+    }
+}

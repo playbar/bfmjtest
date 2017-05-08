@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white">
+	<ScrollView
+		android:id="@+id/scrollView_parent"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:scrollbars="none">
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<LinearLayout
+				android:id="@+id/parent_downloading"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+
+					android:layout_alignParentTop="true"
+				android:orientation="vertical">
+				<TextView
+					android:id="@+id/tv_downloading"
+					android:layout_width="fill_parent"
+					android:layout_height="40dp"
+					android:gravity="center_vertical"
+					android:background="#EFEFEF"
+					android:paddingLeft="10dp"
+					android:text="正在下载(0)"
+					android:textColor="#999999"
+					android:textSize="12sp" />
+
+				<ListView
+					android:id="@+id/lv_downloading"
+					style="@style/listview_style"/>
+
+				<LinearLayout
+					android:id="@+id/ll_downloading_more"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:padding="15dp"
+					android:gravity="center"
+					android:visibility="gone">
+
+					<ImageView
+						android:id="@+id/iv_downloading_more"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content" />
+				</LinearLayout>
+			</LinearLayout>
+			<LinearLayout
+				android:id="@+id/parent_downloaded"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/parent_downloading"
+				android:orientation="vertical">
+				<TextView
+					android:id="@+id/tv_downloaded"
+					android:layout_width="fill_parent"
+					android:layout_height="40dp"
+					android:gravity="center_vertical"
+					android:background="#EFEFEF"
+					android:paddingLeft="10dp"
+					android:text="已下载(0)"
+					android:textColor="#999999"
+					android:textSize="12sp" />
+
+				<ListView
+					android:id="@+id/lv_downloaded"
+					style="@style/listview_style"/>
+			</LinearLayout>
+		</RelativeLayout>
+	</ScrollView>
+	<LinearLayout
+		android:id="@+id/ll_empty"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:background="@color/bg_color"
+		android:gravity="center_horizontal"
+		android:paddingTop="100dp"
+		android:orientation="vertical"
+		android:visibility="gone">
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/local_download_null_icon" />
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="30dp"
+			android:text="你还没有下载过任何内容"
+			android:textColor="@color/prompt_color"
+			android:textSize="13.3sp"/>
+	</LinearLayout>
+</RelativeLayout>

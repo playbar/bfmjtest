@@ -1,0 +1,9 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- <item android:state_selected="true" android:color="#fff"/> -->
+
+    <item android:state_enabled="true" android:color="@color/theme_main_color"/>
+    <item android:color="@color/prompt_color" android:state_enabled="false"/>
+    <item android:color="@color/prompt_color"/>
+
+</selector>

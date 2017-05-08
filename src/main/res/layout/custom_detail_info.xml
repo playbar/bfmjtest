@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.baofeng.mj.ui.view.AppTitleBackView
+        android:id="@+id/custom_detail_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white_title_bg" />
+
+    <RelativeLayout
+        android:id="@+id/rl_detail_user_info_portrait"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="34.7dp"
+            android:text="头像"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/photo_more"
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/public_arrow_right"
+            android:paddingLeft="10dp" />
+
+        <com.baofeng.mj.ui.view.CircleImageView
+            android:id="@+id/photo"
+            android:layout_width="55.3dp"
+            android:layout_height="55.3dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/photo_more"
+            android:src="@drawable/img_default_icon_classification" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_width"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_detail_user_info_nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/name_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="昵称"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/name_more"
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/public_arrow_right"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/name_more"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_width"
+            android:layout_alignBottom="@+id/name_tag"
+            android:background="@color/divider_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_detail_user_info_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="手机号"
+            android:textColor="@color/title_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/tel_more"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/tel_more"
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/public_arrow_right"
+            android:paddingLeft="10dp" />
+
+    </RelativeLayout>
+</LinearLayout>

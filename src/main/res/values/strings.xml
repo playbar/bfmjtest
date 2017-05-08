@@ -1,0 +1,342 @@
+<resources>
+    <string name="app_name">暴风魔镜VR</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- 官网渠道号 000正式版 -->
+    <string name="mj_000">000</string>
+    <string name="mj_001">001</string>
+    <string name="mj_002">002</string>
+    <string name="mj_003">003</string>
+    <string name="mj_004">004</string>
+    <string name="mj_005">005</string>
+    <string name="mj_006">006</string>
+    <string name="mj_007">007</string>
+    <string name="mj_008">008</string>
+    <string name="mj_009">009</string>
+    <string name="mj_010">010</string>
+
+    <!-- 应用市场渠道号集合（正式版） -->
+    <string-array name="app_market_channel_ids">
+        <item>1201</item>
+        <item>1202</item>
+        <item>1203</item>
+        <item>1204</item>
+        <item>1205</item>
+        <item>1206</item>
+        <item>1207</item>
+        <item>1208</item>
+        <item>1209</item>
+        <item>1210</item>
+        <item>1211</item>
+        <item>1212</item>
+        <item>1213</item>
+        <item>1230</item>
+        <item>1231</item>
+        <item>1213</item>
+    </string-array>
+
+    <!--飞屏-->
+    <string name="what_is_fly_sreen">飞屏是什么</string>
+    <string name="fly_sreen_brief_introduction">飞屏功能可以让你使用手机直接播放\n电脑上的视频</string>
+    <string name="learn_how_to_use">学习如何使用</string>
+    <string name="skip_guide">跳过使用帮助</string>
+    <string name="guide_step_1">1 / 3</string>
+    <string name="guide_step_2">2 / 3</string>
+    <string name="guide_step_3">3 / 3</string>
+    <string name="download_fly_sreen_app">用电脑下载安装飞屏应用</string>
+    <string name="download_address">下载地址</string>
+    <string name="fly_screen_download_url">http://mj.mojing.cn</string>
+    <string name="next_step">下一步</string>
+    <string name="play">播放</string>
+    <string name="scanning_fly_screen_resource">正在扫描飞屏资源...</string>
+    <string name="common_problem">常见问题</string>
+    <string name="device_list">设备列表</string>
+    <string name="device_not_found">没有找到可用的飞屏资源</string>
+    <string name="please_confirm">请确保</string>
+    <string name="computer_installed_fly_screen">1.电脑端已经安装并运行飞屏应用</string>
+    <string name="computer_mobile_in_same_lan">2.电脑与手机连接了相同的Wi-Fi热点</string>
+    <string name="rescan">点击重新扫描</string>
+    <string name="fly_screen_help">飞屏使用帮助</string>
+    <string name="fly_screen_password_error">取消PC端飞屏密码设置</string>
+    <string name="fly_screen_reconnect">PC设备已连接飞屏，请断开重新连接</string>
+    <string name="fly_screen_instruction">飞屏使用说明</string>
+    <string name="fly_screen_serverclosed">飞屏服务器已经关闭，屏幕将跳转到设备页</string>
+    <string name="fly_screen_resource_fail">飞屏资源获取失败</string>
+    <string name="fly_screen_resource_fail_notlogin">未登陆,获取资源失败</string>
+    <string name="fly_screen_network_error">找不到任何飞屏设备，请打开你的 Wi-Fi 开关</string>
+    <string name="fly_screen_preview">预览</string>
+    <!--飞屏帮助页-->
+    <string-array name="fly_screen_questions">
+        <item>Q1: 支持的设备</item>
+        <item>Q2: 为什么搜不到设备?</item>
+        <item>Q3: 怎么添加视频?</item>
+        <item>Q4: 飞屏支持的格式</item>
+    </string-array>
+
+    <!--权限-->
+    <string name="storage_permission_denied">没有文件读取权限，请在系统设置中打开后重试</string>
+    <string name="camera_permission_denied">没有摄像头权限，请在系统设置中打开后重试</string>
+
+
+    <string-array name="fly_screen_answers">
+        <item>A1: 安装暴风影音飞屏版的电脑(windows系统、win7以上)和安装暴风魔镜APP的手机。</item>
+        <item>A2: 请确认电脑电视设备的飞屏是开启状态,并且与要连接的手机在同一wifi下(台式需要自行安装无线网卡)。</item>
+        <item>A3: 目前视频只能在电脑端添加,手机上只可访问已有内容,不支持对资源的添加、更改及删除。</item>
+        <item>A4: 暂时暴风魔镜APP中的飞屏,只支持视频。支持市面上大部分的主流视频格式、3D视频(3D视频请在菜单中选择好播放模式哦)。暂时不支持全景视频。</item>
+    </string-array>
+    <!--我的-->
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="network_exception">网络异常，请检查网络！</string>
+    <string name="login_fail">登录失败</string>
+    <string name="not_install_wechat">您还没有安装微信</string>
+    <string name="not_install_weibo">您还没有安装微博</string>
+    <string name="not_install_qq">您还没有安装QQ</string>
+    <string name="modou">魔豆： %1$s</string>
+    <string name="mo_coin">魔币： %1$s</string>
+    <string name="please_login">请先登录</string>
+    <string name="input_phone_number">请输入手机号码</string>
+    <string name="input_mo_coin_count">请填写魔币数量</string>
+    <string name="input_exchange_code">请输入16位兑换码</string>
+    <string name="phone_number_invalid">手机号输入不正确</string>
+    <string name="select_payment">选择支付方式</string>
+    <string name="pay_later">稍后支付</string>
+    <string name="pay_continue">继续支付</string>
+    <string name="repay">支付失败,请重新支付</string>
+    <string name="recharge_record">充值记录</string>
+    <string name="no_recharge_record">还没有充过值呢</string>
+    <string name="recharge_record_mobi">购买%1$s魔币(¥%2$s)</string>
+    <string name="view_recharge_record">查看充值记录</string>
+    <string name="ok">好的</string>
+    <string name="paid">已付款</string>
+    <string name="unpaid">未付款</string>
+    <string name="recharge_success">充值成功</string>
+    <string name="order_generate_exception">订单生成异常</string>
+    <string name="select_picture_as_head_portrait">选择一张图片作为头像</string>
+    <string name="select_from_album">从相册选择</string>
+    <string name="select_from_camera">用摄像头拍摄</string>
+    <string name="change_nick_name">更改昵称</string>
+    <string name="save">保存</string>
+    <string name="nick_name">昵称</string>
+    <string name="input_nick_name">请输入昵称</string>
+    <string name="nick_name_too_long">昵称大于30个字符</string>
+    <string name="nick_name_too_short">昵称长度少于4个字符</string>
+    <string name="nick_name_success">昵称设置成功！</string>
+    <string name="net_exception">服务器连接失败，请检查网络</string>
+    <string name="change_phone">修改手机号</string>
+    <string name="confirm">确 定</string>
+    <string name="get_short_message_for_free">免费获取短信</string>
+    <string name="no_experience_report">暂时没有体验报告</string>
+    <string name="mj_experience_report">魔镜体验报告</string>
+    <string name="input_nick_name_invalid">昵称中只可使用中英文、数字、下划线、减号</string>
+    <string name="logout_hint">注销或以其他帐户登录</string>
+    <string name="confirm1">确定</string>
+
+    <!--升级-->
+    <string name="check_new_version">检测到新版本【暴风魔镜%1$s】</string>
+    <string name="update_app">升级魔镜</string>
+    <string name="force_update_app_hint">您的魔镜版本太老了，需要升级到最\n新版本才能使用</string>
+
+    <string-array name="quesions">
+        <item>网速为什么这么慢？</item>
+        <item>为什么手机会特别热？</item>
+        <item>为什么画面有颗粒感？</item>
+        <item>魔豆还没使用就不见了？</item>
+    </string-array>
+    <string-array name="answer">
+        <item>&#160;&#160;&#160;&#160;&#160;确保您手机内存充足、网络信号优良。\n\n&#160;&#160;&#160;&#160;&#160;如仍然慢，请您将所在城市、网络运营商反馈给我们。</item>
+        <item>&#160;&#160;&#160;&#160;&#160;由于3D场景需要GPU实时渲染会产生热量，建议使用时长不要超过30分钟。</item>
+        <item>&#160;&#160;&#160;&#160;&#160;为获得更大的视场角，呈现更强烈的沉浸感，三代硬件实现了手机屏幕的高倍放大。由于像素均被放大，会带来一定的颗粒感。\n\n&#160;&#160;&#160;&#160;&#160;建议使用1080P或更高清晰度的手机以降低颗粒感。</item>
+        <item>&#160;&#160;&#160;&#160;&#160;您好，现在赠送的魔豆都是有时间限制的，需要在最后期限前消费，购买付费资源之后是可以随时下载的，所以请尽快消费赠送的魔豆哦。\n\n&#160;&#160;&#160;&#160;&#160;最后期限的查询方法为：打开暴风魔镜APP→进入账户→点击魔豆后的数字即可。</item>
+    </string-array>
+
+    <!-- 陀螺仪提示-->
+    <string name="msg_no_gyroscope">未检测到手机陀螺仪，将会导致较差的体验</string>
+    <string name="msg_warn_gyroscope">手机陀螺仪配置低，将会导致画面漂移旋转</string>
+    <string name="msg_error_gyroscope">手机陀螺仪不稳定，点击重新校准</string>
+    <!--帮助页面蓝牙手柄操作文案-->
+    <string name="help_title">魔镜手柄使用说明</string>
+    <string name="help_list_operate1">1.长按手柄电源键3秒开机，蓝色指示灯闪烁</string>
+    <string name="help_list_operate2">2.开启手机蓝牙，并在蓝牙中搜索带有「Mojing」字样的设备，进行配对连接，配对密码为四个数字零「0000」</string>
+    <string name="help_list_operate3">3.此时手柄已可在VR模式中正常使用</string>
+
+    <string name="help_list_fivegener_operate2">2.连接</string>
+    <string name="help_list_fivegener_operate3">3.此时手柄已可在VR模式中正常使用</string>
+    <string name="no_network">当前手机无网络连接，点击查看解决方法</string>
+    <string name="no_network_step1">1、确保手机的【Wi-Fi】开关为开启状态并且已经连接了正确的热点</string>
+    <string name="no_network_step2">2、确保手机设置中【蜂窝移动网络】已打开，并且已经在运营商开通了相应的流量服务</string>
+    <string name="no_network_step3">若仍然无法解决你的问题，请联系我们的在线客服</string>
+    <string name="no_network_tab">当前没有网，请检查你的网络设置</string>
+    <string name="connect_us">联系我们</string>
+
+    <!-- 教程视频中的列表 -->
+    <string-array name="video_list_item">
+        <item>遥控器连接</item>
+        <item>调节托盘</item>
+        <item>调节瞳距焦距</item>
+        <item>陀螺仪校准</item>
+        <item>常见问题</item>
+    </string-array>
+
+    <string-array name="forth_video_list_item">
+        <item>遥控器连接</item>
+        <item>调节头带</item>
+        <item>调节瞳距</item>
+        <item>陀螺仪校准</item>
+        <item>常见问题</item>
+    </string-array>
+
+    <string name="load_data_failure">数据加载失败</string>
+    <string name="no_date">暂无数据</string>
+    <string name="loading_text">正在加载…</string>
+    <string name="no_content">没有找到内容</string>
+
+    <string name="unlock_dialog_tips">你当前的手机播放高清视频可能会导致黑屏或卡顿，是否继续下载该视频?</string>
+    <string name="unlock_dialog_sure">下载</string>
+    <string name="search_hint">搜索视频或者游戏</string>
+
+    <!--0927版本新加引导页 -->
+    <string name="guide_tips1">虚拟现实(VR)模式需佩戴VR眼镜使用</string>
+    <string name="guide_tips2">为了提供最佳的体验效果</string>
+    <string name="guide_tips3">我们会引导你完成简单的设置</string>
+    <string name="guide_begin">开始</string>
+    <string name="guide_start_now">立即体验 ></string>
+
+    <!-- 镜片页面 -->
+    <string name="guide_glas_scan">扫一扫</string>
+    <string name="guide_glas_scan_tips">您还可以通过扫描产品包装上的二维码选择眼镜</string>
+
+    <string name="guide_noglas_go_shop">去商城购买</string>
+    <string name="guide_noglas_skip">暂不购买，直接进入</string>
+    <!-- 选择手柄控制模式 -->
+    <string name="guide_control_mode_mix">手柄+头控模式</string>
+    <string name="guide_control_mode_mix_tips">用头控制准星移动手柄代替确认键</string>
+    <string name="guide_control_mode_pure">纯手柄模式</string>
+    <string name="guide_control_mode_pure_tips">用手柄控制准许移动和确认</string>
+    <string name="guide_control_mode_no_stick">暂不使用手柄</string>
+
+    <string name="guide_start_vr">从这里进入『VR横屏』</string>
+    <string name="game_open_warn">该游戏为第三方提供，可能出现以下情况: \n\n
+    1.游戏崩溃或闪退\n
+        2.无法完美退出&#160;&#160;&#160;&#160;\n
+        3.可能不适配手柄
+    </string>
+
+     <!--在线播放预览 -->
+    <string name="player_load_failed">加载失败，点击重新加载</string>
+    <string name="player_reload">重新加载</string>
+    <string name="player_no_wifi">&#160;&#160;&#160;&#160;您当前为非Wi-Fi网络\n是否使用手机流量进行播放</string>
+    <string name="player_network_exception">网络异常，请检查网络设置</string>
+    <string name="player_play_continue">继续播放</string>
+    <string name="player_chose_dialog_title">请选择一种播放模式</string>
+    <string name="player_mode_normal">极简模式</string>
+    <string name="player_mode_vr">沉浸模式</string>
+    <string name="player_chose_dialog_remember1"><Data><![CDATA[<font color="#666666"><b>记住该选择</b></font><font color="#999999"><b>（记住后在“设置”中可以自行切换）</b></font>]]></Data></string>
+    <string name="player_chose_dialog_remember2"></string>
+
+    <string name="new_recommend">最新推荐</string>
+    <string name="downloaded">已下载</string>
+    <string name="download">下载</string>
+    <string name="pause">暂停</string>
+    <string name="sd_not_enough">存储空间不足</string>
+    <string name="glasses_mj_type">暴风魔镜</string>
+    <string name="glasses_other_type">其他设备</string>
+    <string name="glasses_adv_setting">高级设置</string>
+
+    <string name="problem_types"><b>问题类型</b></string>
+    <string name="problem_detail"><b>详细描述(*必填)</b></string>
+    <string name="problem_phone"><b>手机号</b></string>
+    <string name="feedback_tips_success">你的反馈我们会认真查看,并尽快修复及完善,\n感谢你对暴风魔镜一如既往的支持</string>
+
+    <string name="help_and_feedback_title">帮助与反馈</string>
+    <string name="opinion_feed_back">意见反馈</string>
+
+    <string name="bluetooth_control_conneced">手柄已连接</string>
+    <string name="bluetooth_control_disconneced">手柄未连接</string>
+    
+    <string name="glasses_go_fb">列表中没有我的眼镜，去反馈</string>
+    <string name="glasses_feedback_content">列表中没有我的眼镜，我的眼镜品牌型号是：</string>
+    <string name="joystick_check_dialog">没有找到可用的手柄，请确保\n你的手柄已正确连接</string>
+    <string name="joystick_connect_instruction">查看连接说明</string>
+    <string name="josytick_unconnect">未连接</string>
+    <string name="activity_joystick_check_title">手柄按键校验</string>
+    <string name="activity_joystick_check_conent">请按下按键校验该按键是否有效</string>
+    <string name="activity_joystick_check_cur_connect">当前连接：</string>
+    <string name="joystick_key_top">上方按键</string>
+    <string name="joystick_key_bottom">下方按键</string>
+    <string name="joystick_key_left">左方按键</string>
+    <string name="joystick_key_right">右方按键</string>
+    <string name="joystick_key_confirm">确认键</string>
+    <string name="joystick_key_back">返回键</string>
+    <string name="joystick_key_menu">菜单键</string>
+    <string name="activity_joystick_tips">校验结果说明：\n\n1.若图中手柄的按键名称变为紫色，则说明该按键功能正常。\n2.若所有按键名称均保持灰色不变，请先尝试重新启动一遍手柄，若仍然按键无效，则有可能是手柄的硬件质量问题。</string>
+    <string name="joystick_connecting">正在连接...</string>
+    <string name="joystick_connecting_tip">请确保手柄处于开机状态</string>
+    <string name="player_exception_tips">网络状态不佳！建议您“暂停”\n等待缓冲或直接下载观看</string>
+    <string name="plugin_loading_tip">「正在安装直播插件，请稍候」</string>
+    <string name="plugin_upgrade_tip">「正在升级直播插件，请稍候」</string>
+    <string name="plugin_updateApp_tip">您当前的魔镜版本过低，无法打开直播间</string>
+    <string name="plugin_downloading_tip">正在下载直播插件</string>
+    <string name="plugin_download_wait_tip">插件下载等待中... </string>
+    <string name="download_continue">继续</string>
+
+    <string name="player_lock_tips">你当前的手机播放高清视频可能会导致黑屏或卡顿，是否继续播放该视频?</string>
+    <string name="mobile_network_tips">您当前为非Wi-Fi网络\n是否使用手机流量查看直播?</string>
+
+    <string name="stick_game_download_dialog_tips">这是一个体感游戏，需要配合体感手柄才能玩儿，是否继续下载?</string>
+    <string name="stick_game_download_dialog_sure">继续下载</string>
+    <string name="stick_game_download_no_more_tips">不再显示此内容</string>
+    <string name="no_glass_text">我没有VR眼镜</string>
+    <string name="select_glasses_text">选择VR眼镜型号</string>
+    <string name="current_device_name">当前设备：%1$s</string>
+    <string name="connect_hand_shank">连接手柄</string>
+    <string name="vr_setting">VR设置</string>
+    <string name="vr_setting_device">头戴式设备</string>
+    <string name="vr_setting_body_feeling_handle">魔镜体感手柄</string>
+    <string name="vr_setting_check_body_feeling_handle">查看连接说明</string>
+    <string name="vr_setting_left_mode">左手模式 (魔镜体感手柄)</string>
+    <string name="vr_setting_left_mode_explain">开启后体感手柄及射线将从界面左侧发出</string>
+    <string name="vr_setting_common_handle">普通手柄</string>
+    <string name="vr_setting_show">显示效果</string>
+    <string name="vr_setting_phone_screen_select">手机屏幕尺寸选择</string>
+    <string name="guide_next">下一步</string>
+    <string name="handle_connect_common">普通手柄</string>
+    <string name="open_connect_common_press">长按电源键3秒开机</string>
+    <string name="handle_connect_motion">体感手柄</string>
+    <string name="open_connect_motion_one">将背部电源开关打开到</string>
+    <string name="open_connect_motion_two">ON位置开机</string>
+    <string name="connect_common_one">取出魔镜中USB数据线</string>
+    <string name="connect_common_two">插头连接手机，手柄自</string>
+    <string name="connect_common_three">动连接</string>
+    <string name="connect_five_one">在手机蓝牙中搜索</string>
+    <string name="connect_five_two">【mojing-motion】</string>
+    <string name="connect_five_three">配对连接</string>
+    <string name="common_handle_open_phone">2.开启手机蓝牙，在蓝牙中搜索设备配对连接</string>
+    <string name="common_open_phone_one">搜索魔镜【mojing】配对密</string>
+    <string name="common_open_phone_two">码【0000】</string>
+    <string name="common_open_phone_motion_one">搜索【mojing-motion】</string>
+    <string name="immediate_experience">立即体验</string>
+    <string name="handle_connect_explain">手柄连接说明</string>
+    <string name="please_check_motion_handle">请按提示操作手柄</string>
+    <string name="check_motion_handle_vol_add">音量+</string>
+    <string name="check_motion_handle_vol_cut">音量-</string>
+    <string name="check_motion_handle_touch_table">触摸板</string>
+    <string name="check_motion_handle_back">返回键</string>
+    <string name="check_motion_handle_home">home键</string>
+    <string name="check_motion_handle_press_touch_table">按下触摸板</string>
+    <string name="check_motion_handle_long_press_touch_table">长按触摸板</string>
+    <string name="check_motion_handle_up_touch_table">上滑触摸板</string>
+    <string name="check_motion_handle_down_touch_table">下滑触摸板</string>
+    <string name="check_motion_handle_left_touch_table">左滑触摸板</string>
+    <string name="check_motion_handle_right_touch_table">右滑触摸板</string>
+    <string name="check_motion_handle_press_back">按下返回键</string>
+    <string name="check_motion_handle_press_home">按下home键</string>
+    <string name="check_motion_handle_long_press_home">长按home键</string>
+    <string name="check_motion_handle_gyro_wag">请晃动手柄，以校验手柄陀螺仪功能是否正常</string>
+    <string name="check_motion_handle_gyro">陀螺仪</string>
+    <string name="check_motion_handle_confirm">扳机键</string>
+    <string name="check_motion_handle_press_confirm">按下扳机键</string>
+    <string name="unity_back">退出</string>
+    <string name="gl_player_locked">当前为锁屏模式，点击这里解锁</string>
+    <string name="gl_player_unlocked">您已关闭锁屏模式，点击这里锁屏</string>
+</resources>

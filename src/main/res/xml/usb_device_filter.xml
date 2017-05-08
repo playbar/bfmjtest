@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- 暴风魔镜5 -->
+    <usb-device vendor-id="11561" product-id="4097" />
+    <!-- 未知 -->
+    <usb-device vendor-id="1155" product-id="57105" />
+    <!-- 海智南 -->
+    <usb-device vendor-id="44113" product-id="4417" />
+</resources>

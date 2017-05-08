@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/go_unity_bg"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center"
+	android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="53.33dp"
+		android:background="@color/app_purple_title_bg_before">
+
+		<TextView
+			android:id="@+id/go_unity_glass_pre"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:textColor="@color/white"
+			android:gravity="center"
+			android:paddingLeft="10dp"
+			android:text="当前使用："/>
+
+		<TextView
+			android:id="@+id/go_unity_glass"
+			android:layout_toRightOf="@+id/go_unity_glass_pre"
+			android:layout_width="80dp"
+			android:layout_height="match_parent"
+			android:textColor="@color/white"
+			android:gravity="left|center_vertical"
+			android:singleLine="true"
+			android:text="@null"/>
+
+		<TextView
+			android:id="@+id/go_unity_control_pre"
+			android:layout_toRightOf="@+id/go_unity_glass"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:textColor="@color/white"
+			android:gravity="center"
+			android:paddingLeft="20dp"
+			android:text="控制方式："/>
+
+		<TextView
+			android:id="@+id/go_unity_control"
+			android:layout_toRightOf="@+id/go_unity_control_pre"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:textColor="@color/white"
+			android:gravity="center"
+			android:text="头控"/>
+
+		<ImageButton
+			android:id="@+id/go_unity_setting"
+			android:layout_alignParentRight="true"
+			android:layout_width="@dimen/public_title_height"
+			android:layout_gravity="center"
+			android:layout_height="match_parent"
+			android:background="@null"
+			android:src="@drawable/enter_icon_setting" />
+	</RelativeLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:paddingTop="110dp"
+		android:paddingBottom="60dp">
+
+		<LinearLayout
+			android:id="@+id/go_unity_tips_pre"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:orientation="horizontal">
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textSize="15sp"
+				android:padding="10dp"
+				android:text="请把手机"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/go_unity_tips_pre"
+				android:gravity="center"
+				android:textSize="15sp"
+				android:padding="10dp"
+				android:textColor="@color/theme_main_color"
+				android:text="[向左旋转]"/>
+		</LinearLayout>
+
+		<TextView
+			android:id="@+id/go_unity_tips2_pre"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/go_unity_tips_pre"
+			android:gravity="center"
+			android:textSize="15sp"
+			android:text="横置到魔镜中"/>
+
+
+		<ImageView
+			android:id="@+id/go_unity_mobile"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/go_unity_tips2_pre"
+			android:layout_centerHorizontal="true"
+			android:gravity="center"
+			android:textSize="20sp"
+			android:padding="33.33dp"
+			android:src="@drawable/enter_img_phone"/>
+
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/go_unity_mobile"
+			android:gravity="center"
+			android:orientation="horizontal">
+			<TextView
+				android:id="@+id/go_unity_second"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textColor="@color/white"
+				android:textSize="43.33sp"
+				android:padding="10dp"
+				android:text="3"/>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textSize="15sp"
+				android:textColor="@color/white"
+				android:text="秒后进入VR模式"/>
+		</LinearLayout>
+
+		<ImageView
+			android:id="@+id/go_unity_back"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textSize="20sp"
+			android:padding="10dp"
+			android:layout_centerHorizontal="true"
+			android:layout_alignParentBottom="true"
+			android:src="@drawable/video_icon_close"/>
+
+	</RelativeLayout>
+
+</LinearLayout>

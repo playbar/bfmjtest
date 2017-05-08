@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rect_four_item_layout"
+    android:background="@color/white"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="13.3dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <ImageView
+            android:id="@+id/rect_four_image"
+            android:layout_width="66.7dp"
+            android:layout_height="66.7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_default_4n"/>
+
+        <ImageView
+            android:id="@+id/rect_four_stickgame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/market_icon_game"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/rect_four_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@null"
+        android:textColor="@color/title_color"
+        android:layout_marginBottom="10dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textSize="@dimen/btn_text_size" />
+
+    <Button
+        android:id="@+id/rect_four_btn"
+        android:layout_width="56.7dp"
+        android:layout_height="26.7dp"
+        android:background="@drawable/corner_blue_bg"
+        android:gravity="center"
+        android:text="下载"
+        android:textColor="@color/btn_normal_color"
+        android:textSize="@dimen/btn_text_size" />
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_file_image"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="20dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/res_fly_screen_fragment_file_img" />
+
+    <TextView
+        android:id="@+id/tv_file_name"
+        style="@style/res_normal_flylist_text_style"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@+id/tv_video_play"
+        android:layout_toRightOf="@+id/iv_file_image"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"/>
+
+    <TextView
+        android:id="@+id/tv_video_play"
+        style="@style/parent_btn_style"
+        android:background="@drawable/corner_purple_bg"
+        android:textColor="@color/theme_main_color"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="@string/fly_screen_preview"
+        android:visibility="gone"
+        android:textSize="@dimen/btn_text_size" />
+
+</RelativeLayout>

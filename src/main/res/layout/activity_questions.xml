@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_backgroud_pic"
+    android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="@color/app_white_title_bg"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true" >
+
+        <ImageButton
+            android:id="@+id/question_back"
+            style="@style/app_title_back_btn_style" />
+
+        <TextView
+            style="@style/app_title_text_style"
+            android:text="常见问题" />
+    </RelativeLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/white"/>
+    <ExpandableListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/expandlist"
+        android:divider="@drawable/listview_divider_with_padding"
+        android:dividerHeight="0.33dp"
+        android:listSelector="@android:color/transparent"
+        android:childDivider="@android:color/transparent"/>
+
+</LinearLayout>

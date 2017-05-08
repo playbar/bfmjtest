@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/guide_content_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:alpha="0.85" />
+
+    <RelativeLayout
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/guide_startvr_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/guide_button"/>
+
+        <TextView
+            android:id="@+id/guide_startvr_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/title_color"
+            android:layout_marginTop="35dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/guide_start_vr" />
+
+        <TextView
+            android:id="@+id/guide_startvr_textview"
+            android:layout_centerHorizontal="true"
+            android:layout_width="86.67dp"
+            android:layout_height="26.67dp"
+            android:layout_marginTop="115dp"
+            android:gravity="center"
+            android:layout_below="@id/guide_startvr_tips"
+            android:textColor="@color/theme_main_color"
+            android:background="@drawable/corner_purple_bg"
+            android:textSize="13.33sp"
+            android:text="我知道了" />
+    </RelativeLayout>
+
+</RelativeLayout>

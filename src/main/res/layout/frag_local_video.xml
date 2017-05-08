@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white">
+
+	<LinearLayout
+		android:id="@+id/ll_video_title"
+		android:layout_width="match_parent"
+		android:layout_height="40dp"
+		android:background="#EFEFEF"
+		android:orientation="horizontal"
+		android:gravity="center_vertical"
+		android:visibility="gone">
+
+	    <TextView
+			android:id="@+id/tv_video_count"
+			android:layout_width="0.0dp"
+			android:layout_weight="1.0"
+			android:layout_height="wrap_content"
+			android:paddingLeft="10dp"
+		android:text="视频(0)"
+		android:textColor="@color/prompt_color"
+		android:textSize="12sp" />
+
+		<LinearLayout
+			android:id="@+id/ll_menu"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp">
+
+		<ImageView
+			android:layout_width="20dp"
+			android:layout_height="20dp"
+			android:src="@drawable/local_video_menu" />
+		</LinearLayout>
+			<LinearLayout
+				android:id="@+id/ll_file_browse"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp">
+
+		<ImageView
+			android:layout_width="20dp"
+			android:layout_height="20dp"
+			android:src="@drawable/local_video__folder" />
+
+	</LinearLayout>
+		</LinearLayout>
+
+	<com.handmark.pulltorefresh.library.PullToRefreshListView
+		android:id="@+id/pullToRefreshListView"
+		android:layout_below="@id/ll_video_title"
+		style="@style/pullToRefreshListView_style" />
+
+	<LinearLayout
+		android:id="@+id/ll_empty"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:background="@color/bg_color"
+		android:orientation="vertical"
+		android:gravity="center_horizontal"
+		android:visibility="gone">
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/local_video_empty_icon"
+			android:layout_marginTop="30dp"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="暂时没有找到视频"
+			android:textSize="13.3sp"
+			android:textColor="@color/prompt_color"
+			android:layout_marginTop="30dp"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="您可以试试手动查找视频"
+			android:textSize="13.3sp"
+			android:textColor="@color/prompt_color"
+			android:layout_marginTop="5dp"/>
+
+		<TextView
+			android:id="@+id/tv_browser_local"
+			android:layout_width="150dp"
+			android:layout_height="35dp"
+			android:gravity="center"
+			android:text="点击浏览本地"
+			android:textSize="13.3sp"
+			android:textColor="@color/theme_main_color"
+			android:layout_marginTop="30dp"
+			android:background="@drawable/purple_line_with_corner_bg"/>
+	</LinearLayout>
+
+	<com.baofeng.mj.ui.view.CustomProgressView
+		android:id="@+id/local_video_loading"
+		android:layout_gravity="center"
+		android:visibility="gone"
+		android:layout_centerInParent="true"
+		android:layout_width="100dp"
+		android:layout_height="100dp" />
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:drawable="@drawable/white_card_press" android:state_pressed="true"/>
+	<item android:drawable="@color/btn_disable_color" android:state_enabled="false"/>
+	<item android:drawable="@color/white"/>
+
+</selector>

@@ -1,0 +1,10 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- <item android:state_selected="true" android:color="#fff"/> -->
+
+    <item android:state_pressed="true" android:color="@color/tab_highlight_text_color"/>
+    <item android:state_selected="true" android:color="@color/tab_highlight_text_color"/>
+    <item android:color="@color/tab_highlight_text_color" android:state_checked="true"/>
+    <item android:color="@color/tab_normal_text_color"/>
+
+</selector>

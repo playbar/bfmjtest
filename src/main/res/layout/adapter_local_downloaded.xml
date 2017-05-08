@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/list_one_image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_marginTop="10dp"
+                android:layout_width="75dp"
+                android:layout_height="55dp"/>
+            <ImageView
+                android:id="@+id/downloaded_stickgame"
+                android:paddingLeft="4dp"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/market_icon_game"/>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:text="@null"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/prompt_color"
+                android:textSize="12sp"
+                android:text="@null" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_download"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:gravity="center"
+            android:background="@drawable/corner_downloading_bg"
+            android:textColor="@color/main_tab_text_normal"
+            android:textSize="14sp"
+            android:text="@null" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view_divider"
+        style="@style/divider_line" />
+</LinearLayout>

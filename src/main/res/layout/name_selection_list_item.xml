@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RadioButton
+        android:id="@+id/name_selection_item_textview"
+        android:layout_width="match_parent"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_height="50dp"
+        android:text="高清（450MB）"
+        android:button="@null"
+        android:textColor="@color/grey_purple_bg_color"
+        android:gravity="left|center_vertical" />
+</RelativeLayout>

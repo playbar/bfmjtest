@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:sharedUserId="android.uid.system"
+    package="com.baofeng.mj"
+    android:installLocation="preferExternal"
+    
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="22" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED"/>
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+
+    <uses-feature android:glEsVersion="0x00020000" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen.multitouch"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen.multitouch.distinct"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.usb.host" />
+
+    <application
+        android:name=".business.publicbusiness.BaseApplication"
+        android:persistent="true"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/app_transparent"
+        android:largeHeap="true"
+        tools:replace="icon,theme" >
+        <!--&lt;!&ndash; 根据眼镜类型 打不同的包 0:1代2代镜片  1：A镜片  2：B镜片 3:4代镜片  6:魔镜小D  7:3代镜片 &ndash;&gt;-->
+        <meta-data
+            android:name="GLASSES_TYPE"
+            android:value="3"
+            />
+        <!-- 根据不同的GLASSES_ID 设置默认眼镜 该ID同CMS后台定义相同  官方硬件渠道包-->
+        <meta-data
+            android:name="GLASSES_ID"
+            android:value="0"
+            />
+
+        <!-- 魔镜SDK集成参数 -->
+        <meta-data
+            android:name="IMMERSIVE_MODE"
+            android:value="true" />
+        <meta-data
+            android:name="DEVELOPER_MERCHANT_ID"
+            android:value="C3845343263589043"
+            tools:node="replace" />
+        <meta-data
+            android:name="DEVELOPER_APP_ID"
+            android:value="\04079800577454590"
+            tools:node="replace" />
+        <meta-data
+            android:name="DEVELOPER_APP_KEY"
+            android:value="f29368ee8aca2baf0fb24c96da1fd64f"
+            tools:node="replace" />
+        <meta-data
+            android:name="DEVELOPER_CHANNEL_ID"
+            android:value="@string/mj_000"
+            tools:node="replace" />
+        <meta-data
+            android:name="com.baofeng.mojing.joystick.use"
+            android:value="true"
+            tools:node="replace" />
+
+        <!-- 友盟统计，用户反馈，友盟push    start -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="540fc944fd98c5b33b054f32"
+            tools:node="replace" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="50aa36a81947c2673bd374ff0307655f" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="myself"
+            tools:node="replace" />
+
+        <!-- 运行平台： 0 一体机，1手机-->
+        <meta-data
+            android:name="running_platform"
+            android:value="0"
+             tools:node="replace"
+            />
+			
+		<meta-data 
+			android:name="com.mojing.vr.type"
+            android:value="Mojing-SVR" />
+
+        <activity
+            android:name="com.mojing.sdk.pay.widget.MojingPayValidationActivity"
+            android:label="魔镜支付确认双屏"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.mojing.sdk.pay.widget.MojingPayValidationSingleActivity"
+            android:label="魔镜支付确认单屏"
+            android:launchMode="singleTask"
+            android:screenOrientation="user"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <service android:name="com.mojing.sdk.pay.service.AIDLService">
+            <intent-filter>
+                <action android:name="android.intent.action.AIDLService" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <!-- 线上线下包在此修改 1：线上包，0：线下包 -->
+        <meta-data
+            android:name="ONLINE_OFFLINE"
+            android:value="1"
+            tools:node="replace" />
+
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:screenOrientation="portrait">
+            
+        </activity>
+
+        <activity
+            android:name=".ui.activity.GuideActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".pubblico.activity.MainActivityGroup"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".unity.UnityActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+              <!-- <category android:name="android.intent.category.LAUNCHER" />-->
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.MONKEY"/>
+                <category android:name="android.intent.category.HOME"/>
+            </intent-filter>
+            <!-- 接收USB设备通知 -->
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            <!-- 第三方打开魔镜app，统一方式 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="mojing" />
+                <data android:scheme="package"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/usb_device_filter" />
+            <meta-data
+                android:name="unityplayer.UnityActivity"
+                android:value="true" />
+        </activity>
+        <activity
+            android:name=".ui.activity.MediaGlActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ui.activity.GoUnity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.PanoramaDetailActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.baofeng.mj.videoplugin.action"/>
+                <action android:name="android.intent.action.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.LiveDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.LocalVideoPreviewActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".ui.activity.VideoDetailActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AllSelectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/app_translucent" />
+        <activity
+            android:name=".ui.activity.TopicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AppListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ChoicenessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.GameDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CommentDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SubscribeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ChargeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.FileBrowseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ConnectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CustomInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.TaskListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.GlasseChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.VRGuideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ControlActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ControlSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ControlModeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.NoNetWorkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.GyroscopeActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.FlyScreenHelpActivity" />
+        <activity
+            android:name=".ui.activity.CodeScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ShopWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.H5Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.VideoHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activity.NativeLoginActivity" />
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.QuestionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.RechargeRecordActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 登陆 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1104291863" />
+                <!-- 100380359 100381104 222222 -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- weibo -->
+        <activity
+            android:name=".ui.activity.WBAuthActivity"
+            android:configChanges="keyboardHidden|navigation"
+            android:screenOrientation="portrait" />
+        <!-- 必须注册在微博授权，分享微博时候用到 -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 新浪微博sdk 手机短信注册页面 -->
+        <activity
+            android:name="com.sina.weibo.sdk.register.mobile.MobileRegisterActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 新浪微博sdk 注册选择国家页面 -->
+        <activity
+            android:name="com.sina.weibo.sdk.register.mobile.SelectCountryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|navigation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 微博支付回调 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|navigation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx3b2c51a5e12a93da" />
+            </intent-filter>
+        </activity>
+
+        <!-- alipay sdk begin 支付宝自带actvity -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.activity.UserPayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.UserRenameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.GlassSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ImageCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <service
+            android:name="com.baofeng.mojing.service.MojingSDKService"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baofeng.mojing.service.MojingSDKAIDLService" />
+            </intent-filter>
+        </service>
+
+
+        <service android:name="com.baofeng.mojing.sdk.download.service.MjDownloadService" />
+        <activity
+            android:name=".ui.activity.ResetPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.BindPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.StormLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.ChangePhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.WebExperienceReportActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.baofeng.mj.ui.activity.OpenMovieActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:label="暴风魔镜pro"
+            android:launchMode="singleTask"
+            android:process="com.video"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <meta-data
+                android:name="unityplayer.UnityActivity"
+                android:value="true" />
+            <meta-data
+                android:name="unityplayer.ForwardNativeEventsToDalvik"
+                android:value="false" />
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/jpeg" />
+                <data android:mimeType="image/png" />
+            </intent-filter>
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:mimeType="video/*" android:scheme="http"/>
+                <data android:mimeType="video/*" android:scheme="rtsp"/>
+                <data android:mimeType="video/*" android:scheme="file"/>
+                <data android:mimeType="video/*" android:scheme="content"/>
+                <data android:mimeType="video/*" android:scheme="mms"/>
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.BHD"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.bhd"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.divx"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.wmp"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.rpm"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.rp"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.evo"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.vob"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.3gp2"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.3gp2"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.GHD"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.amv"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.bik"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.csf"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.d2v"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.dsm"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.ivf"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.m1v"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.m2p"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.m2ts"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.m2v"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.m4b"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.m4p"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.mts"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.ogm"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.pmp"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.pmp2"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.pss"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.pva"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.ratDVD"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.tp"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.tpr"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.vg2"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.vid"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.vp6"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.vp7"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.wv"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.asm"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.avsts"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.swf"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.flic"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.flc"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.mod"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.vp5"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.sub"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.asf"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.asx"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.ram"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.rm"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.rmvb"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.scm"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.smk"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.webm"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.wm"
+                    android:scheme="file" />
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.wmv"
+                    android:scheme="file" />
+            </intent-filter>
+        </activity>
+
+        <!-- 登录、注册、消费sdk -->
+        <activity
+            android:name="com.baofeng.mj.user.activity.SdkSingleLoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.baofeng.mj.user.activity.SdkSingleLoginActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.baofeng.mj.user.activity.SdkRegisterActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.baofeng.mj.user.activity.SdkRegisterActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.baofeng.mjgl.pubblico.layout.SdkDoubleLoginActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.baofeng.mjgl.pubblico.layout.SdkDoubleLoginActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- apk安装，卸载等广播 -->
+        <receiver android:name="com.baofeng.mj.business.brbusiness.ApkInstallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <!-- 自定义通知广播 -->
+        <receiver android:name="com.baofeng.mj.business.brbusiness.PushReceiver">
+            <intent-filter>
+                <action android:name="action.REDIRECT_NO" />
+                <action android:name="action.REDIRECT_OUT" />
+                <action android:name="action.REDIRECT_INNER" />
+            </intent-filter>
+        </receiver>
+        <!-- 友盟反馈服务-->
+        <service
+            android:name=".business.sebusiness.FeedbackService"
+            android:enabled="true"
+            android:label="FeedbackService"
+            android:priority="1000"
+            android:process=":FeedbackService">
+            <intent-filter>
+                <action android:name="com.baofeng.mj.pubblico.service.FeedbackService" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.RSSI_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </service>
+        <!-- 启动友盟反馈的广播，没有此需求，暂时屏蔽 lixianke 2016-11-2 -->
+        <!--<receiver-->
+            <!--android:name=".business.brbusiness.FeedBackReceiver"-->
+            <!--android:priority="1000">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.BOOT_COMPLETED" />-->
+                <!--<action android:name="com.baofeng.notify_service_destroy" />-->
+                <!--<action android:name="com.baofeng.emergnotify" />-->
+                <!--<action android:name="com.baofeng.HASDOWNLOAD" />-->
+                <!--<action android:name="com.baofeng.NODOWNLOAD" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+
+        <!--android 6.0授权-->
+        <activity
+            android:name=".ui.activity.ShadowPermissionActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/activity_transparent" />
+        <receiver android:name=".business.brbusiness.BluetoothReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.activity.ResolSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.SearchActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.PlayerTypeSelectionActivity"
+            />
+        <activity
+            android:name=".ui.activity.FeedbackActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

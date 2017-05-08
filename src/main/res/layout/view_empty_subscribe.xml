@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="66.6dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33.3dp"
+        android:background="@drawable/empty_img_subscribe" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="13.3dp"
+        android:text="您当前没有订阅任何内容"
+        android:textColor="@color/prompt_color"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="6.6dp"
+        android:text="使用扫一扫功能扫描订阅源的"
+        android:textColor="@color/prompt_color"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="33.3dp"
+        android:text="二维码可订阅内容"
+        android:textColor="@color/prompt_color"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/sub_scan_btn"
+        android:layout_width="142dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/corner_purple_bg"
+        android:gravity="center"
+        android:text="扫一扫"
+        android:textColor="@color/theme_main_color"
+        android:textSize="13sp" />
+</LinearLayout>

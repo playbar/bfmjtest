@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="2dp" >
+
+    <com.baofeng.mj.ui.view.BaseGridView
+        android:id="@+id/view_grid"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="5"
+        android:padding="10dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="6.67dp"
+        android:layout_centerInParent="true" />
+
+</FrameLayout>

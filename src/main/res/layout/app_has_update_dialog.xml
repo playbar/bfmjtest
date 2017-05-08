@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dialog_white_bg"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:text="检查更新"
+        android:textColor="@color/title_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_app_update_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="20dp"
+        android:text="检测到新版本【暴风魔镜3.10.3234】"
+        android:textColor="@color/content_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="是否立即升级？"
+        android:textColor="@color/content_color"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_app_update_prompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="3"
+        android:paddingLeft="10dp"
+        android:paddingRight="6dp"
+        android:scrollbars="vertical"
+        android:textColor="@color/content_color"
+        android:textSize="@dimen/btn_text_size" />
+
+    <include layout="@layout/view_line_divider_withour_margin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/has_update_dialog_cancle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="取消"
+            android:textColor="@color/content_color"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:id="@+id/has_update_dialog_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/theme_main_color"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

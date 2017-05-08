@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <com.baofeng.mj.ui.view.AppTitleBackView
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white_title_bg" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/content_color"
+        android:textSize="15sp"
+        android:layout_marginTop="33.3dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:text="@string/activity_joystick_check_conent"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/prompt_color"
+        android:textSize="11.3sp"
+        android:id="@+id/joystick_cur_connect"
+        android:text="@string/activity_joystick_check_cur_connect"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/prompt_color"
+            android:textSize="11.3sp"
+            android:background="@drawable/corner_round_gray_bg"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:id="@+id/joystick_connecting_tip"
+            android:text="@string/joystick_connecting_tip"
+            android:layout_gravity="center"
+            android:layout_marginBottom="25dp"
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="60dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/handle"
+            android:layout_marginRight="16.6dp"
+            />
+        <include layout="@layout/view_joystick_check"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color"
+        android:textColor="@color/prompt_color"
+        android:textSize="11.3sp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:padding="10dp"
+        android:text="@string/activity_joystick_tips"
+        android:layout_marginBottom="30dp"
+        />
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

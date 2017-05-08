@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/definition_item_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="高清（450MB）"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/theme_main_color"
+        android:gravity="center" />
+
+    <ImageView
+        android:id="@+id/definition_item_unlock"
+        android:layout_toRightOf="@id/definition_item_textview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="18dp"
+        android:visibility="gone"
+        android:src="@drawable/icon_unlock" />
+
+</RelativeLayout>

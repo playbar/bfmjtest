@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/public_title_height"
+        android:background="@color/app_white_title_bg">
+
+        <ImageButton
+            android:id="@+id/control_setting_back"
+            android:layout_width="@dimen/public_title_height"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/my_scan_close" />
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/control_setting_radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <RadioButton
+            android:id="@+id/control_glasses"
+            style="@style/vidio_long_tab_text_style"
+            android:layout_weight="1"
+            android:text="眼镜型号" />
+
+        <RadioButton
+            android:id="@+id/control_mode"
+            style="@style/vidio_long_tab_text_style"
+            android:layout_weight="1"
+            android:text="控制方式" />
+
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/control_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/black_layer"
+        android:background="@color/black_cc"/>
+</RelativeLayout>

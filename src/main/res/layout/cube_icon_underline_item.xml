@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:orientation="vertical">
+
+    <RadioButton
+        android:id="@+id/cube_icon_radiobtn"
+        android:background="@drawable/video_detail_selection_selector"
+        style="@style/cube_icon_underline_text_style"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="9dp"
+        android:gravity="center"
+        android:focusable="false"
+        android:layout_gravity="center">
+    </RadioButton>
+
+    <View
+        android:id="@+id/cube_icon_underline"
+        style="@style/public_line_style"
+        android:layout_width="wrap_content"
+        android:layout_height="0.33dp"/>
+</LinearLayout>
+

@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/layout'] } }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+repositories {
+    flatDir {
+        dirs '../../libs'
+    }
+}
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+//    compile project(':MojingSDKLibrary')
+    compile files('libs/okhttp-3.0.0.jar')
+    compile files('libs/okio-1.6.0.jar')
+    compile files('libs/gson-2.2.2.jar')
+//    compile files('libs/MJViewCore.jar')
+
+    compile project(':libraries:MJViewCore')
+    //compile 'com.android.support:appcompat-v7:23.0.1'
+}

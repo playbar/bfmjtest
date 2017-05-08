@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+    <!--1.打开手柄开关，蓝色指示灯闪烁-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/handle_marginTop"
+        android:paddingLeft="@dimen/handle_connect_marginLeft"
+        android:paddingRight="15dp"
+        android:paddingTop="20dp"
+        android:text="@string/help_list_operate1"
+        android:textColor="@color/handle_connect_open_color"
+        android:textSize="@dimen/content_text_size" />
+
+    <!--普通手柄-->
+
+   <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/handle_connect_marginLeft"
+            android:orientation="vertical"
+           android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/handle_connect_common"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/content_text_size"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_connect_common_press"
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/content_text_size"
+                />
+
+
+        </LinearLayout>-->
+
+
+        <ImageView
+            android:layout_width="@dimen/handle_img_width"
+            android:layout_height="@dimen/handle_img_height"
+            android:src="@drawable/enter_blueteeth_img1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/handle_img_marginRight"
+            android:layout_gravity="center"
+           />
+
+  <!--  </RelativeLayout>-->
+
+    <!--体感手柄-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/handle_marginTop"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/handle_connect_marginLeft"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/handle_connect_motion"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/content_text_size"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_connect_motion_one"
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/content_text_size"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/open_connect_motion_two"
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/content_text_size"
+                />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="@dimen/handle_img_width"
+            android:layout_height="@dimen/handle_img_height"
+            android:src="@drawable/open_motion_handle"
+           android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/handle_img_marginRight"/>
+
+    </RelativeLayout>
+
+     <!-- 2.连接-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help_list_fivegener_operate2"
+        android:paddingBottom="@dimen/handle_marginTop"
+        android:paddingLeft="@dimen/handle_connect_marginLeft"
+        android:paddingTop="@dimen/handle_marginTop"
+        android:textColor="@color/handle_connect_open_color"
+        android:textSize="@dimen/content_text_size"
+       />
+
+
+        <!--普通手柄-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/handle_marginTop"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/handle_connect_marginLeft"
+            android:orientation="vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/linearLayout">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/handle_connect_common"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/content_text_size"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/connect_five_one"
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/content_text_size"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/connect_five_two"
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/content_text_size"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/connect_five_three"
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/content_text_size"
+                />
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="@dimen/handle_img_width"
+            android:layout_height="@dimen/handle_img_height"
+            android:src="@drawable/enter_blueteeth_usb"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/handle_img_marginRight"/>
+    </RelativeLayout>
+
+        <!--体感手柄-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/handle_marginTop"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/handle_connect_marginLeft"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/handle_connect_motion"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/content_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/connect_common_one"
+                    android:textColor="@color/prompt_color"
+                    android:textSize="@dimen/content_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/connect_common_two"
+                    android:textColor="@color/prompt_color"
+                    android:textSize="@dimen/content_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/connect_common_three"
+                    android:textColor="@color/prompt_color"
+                    android:textSize="@dimen/content_text_size" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="@dimen/handle_img_width"
+                android:layout_height="@dimen/handle_img_height"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/handle_img_marginRight"
+                android:src="@drawable/connect_motion_handle" />
+        </RelativeLayout>
+
+
+
+
+        <!--3.此时手柄已可在VR模式中正常使用-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/help_list_fivegener_operate3"
+        android:paddingLeft="@dimen/handle_connect_marginLeft"
+        android:paddingTop="@dimen/handle_marginTop"
+        android:textColor="@color/handle_connect_open_color"
+        android:textSize="@dimen/content_text_size" />
+
+
+
+    <ImageView
+        android:layout_width="@dimen/handle_img_width"
+        android:layout_height="@dimen/handle_img_height"
+        android:layout_gravity="center"
+        android:src="@drawable/use_handle"
+        android:layout_marginTop="@dimen/handle_marginTop"
+        android:layout_marginBottom="@dimen/handle_marginTop"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+

@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
+apply plugin: 'signing'
+
+//group = GROUP
+//version = VERSION_NAME
+//status = 'debug'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.2'
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        //multiDexEnabled true
+
+//        ndk{
+////            platformVersion = 23
+//            moduleName = 'viewcore'
+////            toolchain = 'clang'
+//            stl         = 'gnustl_static'
+////            cppFlags.addAll(['-std=c++11', '-Wall', '-fno-rtti', '-fno-exceptions'])
+////            CFlags.addAll(['-Wall'])
+////            abiFilters.addAll(['armeabi'])
+//            ldLibs 'android', 'log', 'GLESv3', 'EGL'
+//            abiFilters "armeabi-v7a"
+//        }
+
+    }
+    sourceSets.main{
+//        jni.srcDirs = ["src/main/jni"]
+        jniLibs.srcDir "libs"
+//        assets.srcDirs = ['assets']
+    }
+    buildTypes {
+        release {
+            status = 'release'
+//            minifyEnabled true
+//            proguardFile 'proguard.cfg'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+repositories {
+    flatDir {
+        dirs '../../libs'
+    }
+}
+dependencies {
+    compile fileTree(include: ['**.*'], dir: 'libs')
+    compile project(':libraries:mojingsdk')
+    compile(name: 'sdk-base-1.20.0', ext: 'aar')
+    compile(name: 'sdk-common-1.20.0_mj_revision', ext: 'aar')
+}
+
+

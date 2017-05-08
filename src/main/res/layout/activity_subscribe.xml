@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_backgroud_pic"
+    android:orientation="vertical">
+
+
+    <com.baofeng.mj.ui.view.AppTitleBackView
+        android:id="@+id/subscribe_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white_title_bg" />
+
+    <ScrollView
+        android:id="@+id/album_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/album_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/activity_noSub_layout"
+        layout="@layout/view_empty_subscribe"
+        android:visibility="gone"></include>
+</LinearLayout>

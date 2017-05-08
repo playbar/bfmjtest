@@ -1,0 +1,245 @@
+package com.baofeng.mj.util.publicutil;
+
+import java.util.HashMap;
+
+/**
+ * FC键码工具类
+ * @author yanzw
+ * @date 2014-7-17 下午5:14:36
+ */
+public class FCKeyCodeUtil {
+	private static HashMap<Integer, String> keyTable = new HashMap<Integer, String>();
+	
+	/**
+	 * 初始化键码表
+	 */
+	static {
+		keyTable.put(0x01, "ESC");
+		keyTable.put(0x02, "1");
+		keyTable.put(0x03, "2");
+		keyTable.put(0x04, "3");
+		keyTable.put(0x05, "4");
+		keyTable.put(0x06, "5");
+		keyTable.put(0x07, "6");
+		keyTable.put(0x08, "7");
+		keyTable.put(0x09, "8");
+		keyTable.put(0x0A, "9");
+		keyTable.put(0x0B, "0");
+		keyTable.put(0x0C, "-");
+		keyTable.put(0x0D, "=");
+		keyTable.put(0x0E, "B.S.");
+		keyTable.put(0x0F, "Tab");
+		keyTable.put(0x10, "Q");
+		keyTable.put(0x11, "W");
+		keyTable.put(0x12, "E");
+		keyTable.put(0x13, "R");
+		keyTable.put(0x14, "T");
+		keyTable.put(0x15, "Y");
+		keyTable.put(0x16, "U");
+		keyTable.put(0x17, "I");
+		keyTable.put(0x18, "O");
+		keyTable.put(0x19, "P");
+		keyTable.put(0x1A, "[");
+		keyTable.put(0x1B, "]");
+		keyTable.put(0x1C, "Enter");
+		keyTable.put(0x1D, "LCtrl");
+		keyTable.put(0x1E, "A");
+		keyTable.put(0x1F, "S");
+		keyTable.put(0x20, "D");
+		keyTable.put(0x21, "F");
+		keyTable.put(0x22, "G");
+		keyTable.put(0x23, "H");
+		keyTable.put(0x24, "J");
+		keyTable.put(0x25, "K");
+		keyTable.put(0x26, "L");
+		keyTable.put(0x27, ";");
+		keyTable.put(0x28, "'");
+		keyTable.put(0x29, "`");
+		keyTable.put(0x2A, "LShift");
+		keyTable.put(0x2B, "\\");
+		keyTable.put(0x2C, "Z");
+		keyTable.put(0x2D, "X");
+		keyTable.put(0x2E, "C");
+		keyTable.put(0x2F, "V");
+		keyTable.put(0x30, "B");
+		keyTable.put(0x31, "N");
+		keyTable.put(0x32, "M");
+		keyTable.put(0x33, ",");
+		keyTable.put(0x34, ".");
+		keyTable.put(0x35, "/");
+		keyTable.put(0x36, "RShift");
+		keyTable.put(0x37, "*");
+		keyTable.put(0x38, "LAlt");
+		keyTable.put(0x39, "Space");
+		keyTable.put(0x3A, "CL");
+		keyTable.put(0x3B, "F1");
+		keyTable.put(0x3C, "F2");
+		keyTable.put(0x3D, "F3");
+		keyTable.put(0x3E, "F4");
+		keyTable.put(0x3F, "F5");
+		keyTable.put(0x40, "F6");
+		keyTable.put(0x41, "F7");
+		keyTable.put(0x42, "F8");
+		keyTable.put(0x43, "F9");
+		keyTable.put(0x44, "F10");
+		keyTable.put(0x45, "NL");
+		keyTable.put(0x46, "SL");
+		keyTable.put(0x47, "7");
+		keyTable.put(0x48, "8");
+		keyTable.put(0x49, "9");
+		keyTable.put(0x4A, "-");
+		keyTable.put(0x4B, "4");
+		keyTable.put(0x4C, "5");
+		keyTable.put(0x4D, "6");
+		keyTable.put(0x4E, "+");
+		keyTable.put(0x4F, "1");
+		keyTable.put(0x50, "2");
+		keyTable.put(0x51, "3");
+		keyTable.put(0x52, "0");
+		keyTable.put(0x53, ".");
+		keyTable.put(0x56, "<>");
+		keyTable.put(0x57, "F11");
+		keyTable.put(0x58, "F12");
+		keyTable.put(0x64, "F13");
+		keyTable.put(0x65, "F14");
+		keyTable.put(0x66, "F15");
+		keyTable.put(0x70, "Kana");
+		keyTable.put(0x73, "?");
+		keyTable.put(0x79, "Cvt");
+		keyTable.put(0x7B, "NoCvt");
+		keyTable.put(0x7D, "Yen");
+		keyTable.put(0x7E, ".");
+		keyTable.put(0x8D, "=");
+		keyTable.put(0x90, "PTrack");
+		keyTable.put(0x91, "@");
+		keyTable.put(0x92, ":");
+		keyTable.put(0x93, "_");
+		keyTable.put(0x94, "Kanji");
+		keyTable.put(0x95, ".");
+		keyTable.put(0x96, "AX");
+		keyTable.put(0x97, "UN_LB");
+		keyTable.put(0x99, "N.T.");
+		keyTable.put(0x9C, "Enter");
+		keyTable.put(0x9D, "RCtrl");
+		keyTable.put(0xA0, "Mute");
+		keyTable.put(0xA1, "Cal");
+		keyTable.put(0xA2, "Play");
+		keyTable.put(0xA4, "Stop");
+		keyTable.put(0xAE, "V-");
+		keyTable.put(0xB0, "V+");
+		keyTable.put(0xB2, "Home");
+		keyTable.put(0xB3, ",");
+		keyTable.put(0xB5, "/");
+		keyTable.put(0xB7, "SysRQ");
+		keyTable.put(0xB8, "RAlt");
+		keyTable.put(0xC5, "Pause");
+		keyTable.put(0xC7, "Home");
+		keyTable.put(0xC8, "Up");
+		keyTable.put(0xC9, "PgUp");
+		keyTable.put(0xCB, "Left");
+		keyTable.put(0xCD, "Right");
+		keyTable.put(0xCF, "End");
+		keyTable.put(0xD0, "Down");
+		keyTable.put(0xD1, "PgDn");
+		keyTable.put(0xD2, "Ins");
+		keyTable.put(0xD3, "Del");
+		keyTable.put(0xDB, "Left");
+		keyTable.put(0xDC, "Right");
+		keyTable.put(0xDD, "Apps");
+		keyTable.put(0xDE, "Power");
+		keyTable.put(0xDF, "Sleep");
+		keyTable.put(0xE3, "Wake");
+		keyTable.put(0xE5, "Serch");
+		keyTable.put(0xE6, "Fav");
+		keyTable.put(0xE7, "Refresh");
+		keyTable.put(0xE8, "Stop");
+		keyTable.put(0xE9, "Fwd");
+		keyTable.put(0xEA, "Back");
+		keyTable.put(0xEB, "M.C.");
+		keyTable.put(0xEC, "Mail");
+		keyTable.put(0xED, "M.S.");
+		//手柄
+		keyTable.put(0x0100, "X-");
+		keyTable.put(0x0200, "X+");
+		keyTable.put(0x0300, "Y-");
+		keyTable.put(0x0400, "Y+");
+		keyTable.put(0x0500, "Z-");
+		keyTable.put(0x0600, "Z+");
+		keyTable.put(0x0700, "R_X-");
+		keyTable.put(0x0800, "R_X+");
+		keyTable.put(0x0900, "R_Y-");
+		keyTable.put(0x0A00, "R_Y+");
+		keyTable.put(0x0B00, "R_Z-");
+		keyTable.put(0x0C00, "R_Z+");
+		keyTable.put(0x0D00, "P0_U");
+		keyTable.put(0x0E00, "P0_D");
+		keyTable.put(0x0F00, "P0_L");
+		keyTable.put(0x1000, "P0_R");
+		keyTable.put(0x1100, "P1_U");
+		keyTable.put(0x1200, "P1_D");
+		keyTable.put(0x1300, "P1_L");
+		keyTable.put(0x1400, "P1_R");
+		keyTable.put(0x1500, "P2_U");
+		keyTable.put(0x1600, "P2_D");
+		keyTable.put(0x1700, "P2_L");
+		keyTable.put(0x1800, "P2_R");
+		keyTable.put(0x1900, "P3_U");
+		keyTable.put(0x1A00, "P3_D");
+		keyTable.put(0x1B00, "P3_L");
+		keyTable.put(0x1C00, "P3_R");
+		keyTable.put(0x1D00, "00");
+		keyTable.put(0x1E00, "01");
+		keyTable.put(0x1300, "P1_L");
+		keyTable.put(0x1400, "P1_R");
+		keyTable.put(0x1500, "P2_U");
+		keyTable.put(0x1600, "P2_D");
+		keyTable.put(0x1700, "P2_L");
+		keyTable.put(0x1800, "P2_R");
+		keyTable.put(0x1900, "P2_R");
+		keyTable.put(0x1A00, "P3_U");
+		keyTable.put(0x1B00, "P3_D");
+		keyTable.put(0x1C00, "P3_L");
+		keyTable.put(0x1D00, "P3_R");
+		keyTable.put(0x1E00, "01");
+		keyTable.put(0x1F00, "02");
+		keyTable.put(0x2000, "03");
+		keyTable.put(0x2100, "04");
+		keyTable.put(0x2200, "05");
+		keyTable.put(0x2300, "06");
+		keyTable.put(0x2400, "07");
+		keyTable.put(0x2500, "08");
+		keyTable.put(0x2600, "09");
+		keyTable.put(0x2700, "10");
+		keyTable.put(0x2800, "11");
+		keyTable.put(0x2900, "12");
+		keyTable.put(0x2A00, "13");
+		keyTable.put(0x2B00, "14");
+		keyTable.put(0x2C00, "15");
+		keyTable.put(0x2D00, "16");
+		keyTable.put(0x2E00, "17");
+		keyTable.put(0x2F00, "18");
+		keyTable.put(0x3000, "19");
+		keyTable.put(0x3100, "20");
+		keyTable.put(0x3200, "21");
+		keyTable.put(0x3300, "22");
+		keyTable.put(0x3400, "23");
+		keyTable.put(0x3500, "24");
+		keyTable.put(0x3600, "25");
+		keyTable.put(0x3700, "26");
+		keyTable.put(0x3800, "27");
+		keyTable.put(0x3900, "28");
+		keyTable.put(0x3A00, "29");
+		keyTable.put(0x3B00, "30");
+		keyTable.put(0x3C00, "31");
+	}
+	
+	/**
+	 * 键码转键名
+	 * @param keyCode
+	 * @return
+	 */
+	public static String keyCodeToKeyName(Integer keyCode) {
+		return keyTable.get(keyCode);
+	}
+
+}

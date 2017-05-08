@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="RoyalBlue">#4169E1</color>
+    <color name="LightSteelBlue">#B0C4DE</color>
+    <color name="set_text_color">#000000</color>
+    <color name="text_tab_color">#ffffff</color>
+    <color name="dialog_button_text">#333333</color>
+    
+    <color name="list_view_CacheColorHint">#00000000</color>
+    
+</resources>

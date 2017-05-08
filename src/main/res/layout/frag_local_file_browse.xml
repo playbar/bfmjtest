@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/white"
+	android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="@dimen/public_title_height"
+		android:background="@color/app_white_title_bg">
+
+		<LinearLayout
+			android:id="@+id/ll_finish"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:gravity="center">
+		<ImageView
+			android:layout_width="15dp"
+			android:layout_height="15dp"
+			android:src="@drawable/nav_icon_back" />
+		</LinearLayout>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerInParent="true"
+			android:text="文件夹浏览"
+			android:textColor="#333"
+			android:textSize="16sp" />
+	</RelativeLayout>
+
+	<LinearLayout
+		android:id="@+id/ll_back"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:padding="10dp"
+		android:background="#333"
+		android:visibility="gone">
+	<TextView
+		android:id="@+id/tv_back"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="5dp"
+		android:text="返回上一级"
+		android:textColor="@color/theme_main_color"
+		android:textSize="11sp"
+		android:background="@drawable/purple_line_with_corner_bg" />
+	</LinearLayout>
+	<ListView
+		android:id="@+id/lv_root"
+		style="@style/listview_style"/>
+
+	<ListView
+		android:id="@+id/lv_common"
+		style="@style/listview_style"
+		android:visibility="gone"/>
+</LinearLayout>

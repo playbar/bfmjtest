@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/account_head_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/bg_color"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:paddingLeft="20dp"
+       android:layout_marginTop="10dp"
+       style="@style/detail_title_text_style"
+       android:textColor="@color/title_color"
+       android:textStyle="bold"
+       android:text="相关推荐"/>
+
+    <com.baofeng.mj.ui.view.InScrollListView
+        style="@style/res_normal_fly_help_style"
+        android:id="@+id/panorama_rec_list"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="wrap_content" />
+</LinearLayout>

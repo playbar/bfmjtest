@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frag_choiceness_wrapper"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/frag_choiceness_content"
+        android:id="@+id/choiceness_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+    <include
+        android:id="@+id/video_no_network_tab_layout"
+        layout="@layout/view_no_network_tab"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="33.3dp"/>
+
+    <com.baofeng.mj.ui.view.CustomProgressView
+        android:id="@+id/choiceness_loading"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <com.baofeng.mj.ui.view.EmptyView
+        android:visibility="gone"
+        android:id="@+id/choiceness_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>

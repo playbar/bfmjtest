@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.baofeng.mj.ui.view.AppTitleBackView
+        android:id="@+id/gyroscope_check_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white_title_bg" />
+
+    <RelativeLayout xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+        style="@style/app_backgroud_pic"
+        android:orientation="vertical">
+
+        <com.baofeng.mj.ui.view.RoundProgressBar
+            android:id="@+id/gyroscope_roundprogressbar"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android_custom:roundColor="#dddddd"
+            android_custom:roundProgressColor="@color/theme_main_color"
+            android_custom:roundWidth="3dp"
+            android_custom:textColorProgressBar="@color/theme_main_color"
+            android_custom:textIsDisplayable="true"
+            android_custom:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/gyroscope_check_tip"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:text="校准完成"
+            android:textColor="@color/content_color"
+            android:textSize="17sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/gyroscope_check_notice"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.1"
+            android:text="将手机水平放置在\n桌面上保持静止"
+            android:textColor="@color/content_color"
+            android:textSize="15sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/gyroscope_check_begin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gyroscope_roundprogressbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="33.3dp"
+            android:background="@drawable/corner_purple_bg"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/theme_main_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gyroscope_check_begin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="校准陀螺仪会有助于改善头控漂移现象"
+            android:textColor="@color/video_text_grey"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</LinearLayout>

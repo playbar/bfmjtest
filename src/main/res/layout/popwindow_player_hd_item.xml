@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/definition_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"
+        android:background="@null"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:textColor="@drawable/play_strategy_selector"
+        android:textSize="@dimen/btn_text_size" />
+
+</RelativeLayout>

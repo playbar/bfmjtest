@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="73.4dp"
+    android:background="@color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/task_img"
+        android:layout_width="73.4dp"
+        android:layout_height="53.4dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/my_task_img_ph" />
+
+    <TextView
+        android:id="@+id/task_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/task_img"
+        android:includeFontPadding="true"
+        android:paddingTop="3.4dp"
+        android:textColor="@color/title_color"
+        android:textSize="@dimen/btn_text_size" />
+
+    <TextView
+        android:id="@+id/task_time"
+        android:layout_width="wrap_content"
+        android:layout_height="12dp"
+        android:layout_alignBottom="@id/task_img"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/task_img"
+        android:includeFontPadding="false"
+        android:textColor="@color/prompt_color"
+        android:textSize="@dimen/content_text_size" />
+
+    <TextView
+        android:id="@+id/task_btn"
+        android:layout_width="56.7dp"
+        android:layout_height="26.7dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/corner_purple_bg"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textColor="@color/theme_main_color"
+        android:textSize="@dimen/btn_text_size" />
+
+    <TextView
+        android:id="@+id/task_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:textColor="@color/prompt_color"
+        android:textSize="@dimen/btn_text_size" />
+
+    <include
+        android:id="@+id/task_line"
+        layout="@layout/view_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/task_img"
+        android:layout_marginTop="10dp"></include>
+</RelativeLayout>

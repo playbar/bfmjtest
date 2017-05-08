@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <ImageView
+        android:id="@+id/video_img"
+        android:layout_width="118.67dp"
+        android:layout_height="66.67dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_default_2n_cross"/>
+
+    <TextView
+        android:id="@+id/video_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3.33dp"
+        android:layout_toRightOf="@id/video_img"
+        android:includeFontPadding="false"
+        android:text="你好乔安"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/video_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/video_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/video_img"
+        android:background="@drawable/video_vr_3d" />
+
+    <TextView
+        android:id="@+id/video_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/video_label"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/video_img"
+        android:includeFontPadding="false"
+        android:text="视频描述"
+        android:textColor="@color/prompt_color"
+        android:textSize="10.67sp" />
+
+    <View
+        android:id="@+id/video_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/video_img"
+        android:layout_marginTop="10dp"
+        android:background="@color/divider_color" />
+</RelativeLayout>

@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+apply plugin: 'signing'
+//group = GROUP
+//version = VERSION_NAME
+status = 'debug'
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    sourceSets.main{
+        jniLibs.srcDirs =['libs']
+        assets.srcDirs = ['assets']
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    buildTypes {
+        release {
+            status = 'release'
+        }
+    }
+}
+
+dependencies {
+    //    compile fileTree(dir: 'libs', include: '*.jar')
+    compile fileTree(include: ['**.*'], dir: 'libs')
+    compile files('libs/weiboSDKCore_3.1.2.jar')
+}
+

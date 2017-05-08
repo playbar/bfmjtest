@@ -1,0 +1,105 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.0'
+    }
+}
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+apply plugin: 'com.android.application'
+//apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+    useLibrary 'org.apache.http.legacy'
+//    compileSdkVersion 22
+//    buildToolsVersion "22.0.0"
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dexOptions{
+        preDexLibraries = false
+        javaMaxHeapSize "2g"
+    }
+
+    //aar
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    defaultConfig {
+        applicationId "com.baofeng.mj"
+        minSdkVersion 19
+        targetSdkVersion 23
+//        versionCode 1
+//        versionName "4.0.0-4.10.0220.1111"
+        multiDexEnabled true
+
+        ndk {
+            abiFilter("armeabi-v7a")
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+	
+	productFlavors {
+		phone {
+		}
+		matrix {
+        }
+	}
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/maven/com.squareup.okhttp3/okhttp/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okhttp3/okhttp/pom.properties'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.properties'
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: '*.jar', dir: 'libs')
+    compile project(':libraries:PullToRefreshForMJ')
+    compile project(':libraries:FrameworkForMJ')
+    compile project(':libraries:mojingsdk')
+    compile project(':libraries:WeiboSDK')
+    compile project(':libraries:MojingSDKLogin')
+    compile project(':libraries:PushSDK')
+    compile files('libs/core-3.1.0.jar')
+    compile(name:'sdk-base-1.20.0', ext:'aar')
+    compile(name:'sdk-common-1.20.0_mj_revision', ext:'aar')
+    compile(name:'sdk-controller-1.20.0', ext:'aar')
+    compile(name:'sdk-commonwidget-1.20.0', ext:'aar')
+    compile(name:'sdk-panowidget-1.20.0', ext:'aar')
+    compile(name:'MjGvrService', ext:'aar')
+    compile(name:'unitygvr', ext:'aar')
+    compile project(':libraries:DroidPlugin')
+    compile project(':libraries:video-player-manager')
+    //phone
+    phoneCompile project(':libraries:UnityLibrary_phone')
+    phoneCompile(name:'gearsupportlibrary_phone', ext:'aar')
+    // matrix
+    matrixCompile project(':libraries:UnityLibrary_matrix')
+    matrixCompile(name:'gearsupportlibrary_matrix', ext:'aar')
+
+}

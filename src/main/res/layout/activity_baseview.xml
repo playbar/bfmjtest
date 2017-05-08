@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/base_contentview"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <com.baofeng.mj.ui.view.EmptyView
+        android:visibility="gone"
+        android:id="@+id/base_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/base_title_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="@dimen/public_title_height"
+        android:background="@color/app_white_title_bg">
+    </RelativeLayout>
+
+    <com.baofeng.mj.ui.view.AppTitleBackView
+        android:id="@+id/base_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.baofeng.mj.ui.online.view.PlayerActivityTitleView
+        android:id="@+id/player_activity_title"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"></com.baofeng.mj.ui.online.view.PlayerActivityTitleView>
+
+    <com.baofeng.mj.ui.view.CustomProgressView
+        android:id="@+id/base_loading"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+</FrameLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center"
+	android:orientation="vertical">
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="@dimen/public_title_height"
+		android:background="@color/theme_main_color"  >
+
+		<ImageButton
+			android:id="@+id/appstore_account"
+			android:layout_width="@dimen/public_title_height"
+			android:layout_height="match_parent"
+			android:background="@null"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			android:src="@drawable/nav_icon_me" />
+
+		<ImageButton
+			android:id="@+id/appstore_in_vr"
+			android:layout_width="@dimen/public_title_height"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:background="@null"
+			android:src="@drawable/nav_icon_invr" />
+	</RelativeLayout>
+
+	<RadioGroup
+		android:id="@+id/appstore_radiogroup"
+		android:layout_width="match_parent"
+		android:background="@color/white"
+		android:gravity="center"
+		android:layout_height="40dp"
+		android:layout_gravity="center"
+		android:orientation="horizontal">
+
+		<RadioButton
+			android:id="@+id/appstore_commendation"
+			style="@style/vidio_tab_text_style"
+			android:layout_weight="1"
+			android:text="精品"/>
+
+		<RadioButton
+			android:id="@+id/appstore_welfare"
+			style="@style/vidio_tab_text_style"
+			android:layout_weight="1"
+			android:text="福利"/>
+
+		<RadioButton
+			android:id="@+id/appstore_app"
+			style="@style/vidio_tab_text_style"
+			android:layout_weight="1"
+			android:text="应用"/>
+
+		<RadioButton
+			android:id="@+id/appstore_classify"
+			style="@style/vidio_tab_text_style"
+			android:layout_weight="1"
+			android:text="分类"/>
+
+		<RadioButton
+			android:id="@+id/appstore_ranking"
+			style="@style/vidio_tab_text_style"
+			android:layout_weight="1"
+			android:text="排行"/>
+
+	</RadioGroup>
+
+	<android.support.v4.view.ViewPager
+		android:id="@+id/appstore_viewpager"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+
+	</android.support.v4.view.ViewPager>
+
+</LinearLayout>

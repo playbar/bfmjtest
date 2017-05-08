@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    style="@style/app_backgroud_pic"
+    android:orientation="vertical">
+
+    <com.baofeng.mj.ui.view.AppTitleBackView
+        android:id="@+id/setting_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white_title_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/setting_profile_layout"
+            style="@style/public_account_list_style">
+
+            <TextView
+                android:id="@+id/custom_info_tag"
+                style="@style/public_account_list_text_style"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                style="@style/public_account_list_text_style2"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/setting_profile_next" />
+
+            <ImageView
+                android:id="@+id/setting_profile_next"
+                style="@style/public_account_list_arrow_style" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/pro_line"
+            style="@style/public_setting_list_line_style" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"></LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/setting_wifi_layout"
+            style="@style/public_account_list_style">
+
+            <TextView
+                style="@style/public_account_list_text_style"
+                android:layout_marginLeft="20dp"
+                android:text="使用2G/3G/4G流量播放和下载" />
+
+            <TextView
+                android:id="@+id/is_gprs"
+                style="@style/public_account_list_text_style2"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/public_setting_list_line_style"
+            android:visibility="gone"
+            android:layout_gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/setting_mode_layout"
+            android:visibility="gone"
+            style="@style/public_account_list_style">
+
+            <TextView
+                style="@style/public_account_list_text_style"
+                android:layout_marginLeft="20dp"
+                android:text="手柄控制模式" />
+
+            <TextView
+                android:id="@+id/tv_mode"
+                style="@style/public_account_list_text_style2"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/setting_mode_next" />
+
+            <ImageView
+                android:id="@+id/setting_mode_next"
+                style="@style/public_account_list_arrow_style" />
+        </RelativeLayout>
+
+        <View
+            style="@style/public_setting_list_line_style"
+            android:layout_gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/setting_res_layout"
+            style="@style/public_account_list_style"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/public_account_list_text_style"
+                android:layout_marginLeft="20dp"
+                android:text="手机屏幕尺寸选择" />
+
+            <TextView
+                android:id="@+id/tv_res"
+                style="@style/public_account_list_text_style2"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/setting_res_next" />
+
+            <ImageView
+                android:id="@+id/setting_res_next"
+                style="@style/public_account_list_arrow_style" />
+        </RelativeLayout>
+
+        <View
+            style="@style/public_setting_list_line_style"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/setting_path_layout"
+            style="@style/public_account_list_style">
+
+            <TextView
+                style="@style/public_account_list_text_style"
+                android:layout_marginLeft="20dp"
+                android:text="默认下载路径" />
+
+            <TextView
+                android:id="@+id/tv_download_path"
+                style="@style/public_account_list_text_style2"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/setting_path_next"
+                android:text="@null" />
+
+            <ImageView
+                android:id="@+id/setting_path_next"
+                style="@style/public_account_list_arrow_style" />
+        </RelativeLayout>
+        <!--add 播放模式选项 by whf 20161122-->
+        <View
+            style="@style/public_setting_list_line_style"
+            android:layout_gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/setting_player_type"
+            style="@style/public_account_list_style">
+
+            <TextView
+                style="@style/public_account_list_text_style"
+                android:layout_marginLeft="20dp"
+                android:text="默认操控模式" />
+
+            <ImageView
+                android:id="@+id/setting_player_type_next"
+                style="@style/public_account_list_arrow_style" />
+            <TextView
+                android:id="@+id/player_model_des"
+                style="@style/public_account_list_text_style2"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/setting_player_type_next" />
+        </RelativeLayout>
+        <!--end 播放模式选项 by whf 20161122-->
+
+        <!--add 手柄按键校验 by whf 20170223-->
+        <View
+            style="@style/public_setting_list_line_style"
+            android:layout_gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/setting_joystick_check"
+            style="@style/public_account_list_style"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/public_account_list_text_style"
+                android:layout_marginLeft="20dp"
+                android:text="手柄按键校验" />
+
+            <ImageView
+                android:id="@+id/setting_joystick_check_next"
+                style="@style/public_account_list_arrow_style" />
+            <TextView
+                android:id="@+id/joystick_name"
+                style="@style/public_account_list_text_style2"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/setting_joystick_check_next" />
+        </RelativeLayout>
+        <!--end 播放模式选项 by whf 20161122-->
+
+        <View style="@style/public_setting_list_line_style"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/vr_setting"
+            style="@style/public_account_list_style">
+
+            <TextView
+                style="@style/public_account_list_text_style"
+                android:layout_marginLeft="20dp"
+                android:text="@string/vr_setting" />
+
+
+            <ImageView
+                style="@style/public_account_list_arrow_style" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/app_backgroud_pic"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/setting_clear_cache_layout"
+            style="@style/public_account_list_style">
+
+            <TextView
+                style="@style/public_account_list_text_style"
+                android:layout_marginLeft="20dp"
+                android:text="清除缓存" />
+
+            <TextView
+                android:id="@+id/tv_cache_size"
+                style="@style/public_account_list_text_style2"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/setting_clear_cache_next"
+                android:text="@null" />
+
+            <ImageView
+                android:id="@+id/setting_clear_cache_next"
+                style="@style/public_account_list_arrow_style" />
+        </RelativeLayout>
+
+        <View style="@style/public_setting_list_line_style" />
+
+        <RelativeLayout
+            android:id="@+id/setting_update_layout"
+            style="@style/public_account_list_style">
+
+            <TextView
+                android:id="@+id/check_tag"
+                style="@style/public_account_list_text_style"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:id="@+id/update_warn"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/setting_update_next"
+                android:background="@drawable/corner_red_bg"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/setting_update_next"
+                style="@style/public_account_list_arrow_style" />
+        </RelativeLayout>
+
+        <View style="@style/public_setting_list_line_style" />
+
+        <RelativeLayout
+            android:id="@+id/setting_contact_layout"
+            style="@style/public_account_list_style">
+
+            <TextView
+                android:id="@+id/setting_contact_tag"
+                style="@style/public_account_list_text_style"
+                android:layout_marginLeft="20dp"
+                android:text="联系方式" />
+
+            <TextView
+                style="@style/public_account_list_text_style2"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/setting_contact_next"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/setting_contact_next"
+                style="@style/public_account_list_arrow_style" />
+        </RelativeLayout>
+
+        <View style="@style/public_setting_list_line_style" />
+
+        <RelativeLayout
+            android:id="@+id/setting_about_layout"
+            style="@style/public_account_list_style">
+
+            <TextView
+                style="@style/public_account_list_text_style"
+                android:layout_marginLeft="20dp"
+                android:text="关于" />
+
+            <TextView
+                android:id="@+id/about_tag"
+                style="@style/public_account_list_text_style2"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/setting_about_next"
+                android:text="" />
+
+            <ImageView
+                android:id="@+id/setting_about_next"
+                style="@style/public_account_list_arrow_style" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/exit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="退出登录"
+        android:textColor="#F4534B"
+        android:textSize="16sp" />
+</LinearLayout>

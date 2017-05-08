@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:circle="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/account_head_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.baofeng.mj.ui.view.CircleImageView
+            android:id="@+id/account_head_portrait"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="88dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_default_head_portrait"
+            circle:border="false" />
+
+        <!--已登录-->
+        <include layout="@layout/view_account_login" />
+        <!--未登录-->
+        <include layout="@layout/view_account_logout" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_backgroud_pic"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/guide_glasses_layout"
+        android:layout_width="match_parent"
+        android:layout_height="156.67dp"
+        android:background="@color/guide_purple_bg" >
+
+        <TextView
+            android:id="@+id/guide_glasses_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.6"
+            android:paddingLeft="16.67dp"
+            android:paddingBottom="33dp"
+            android:text="选择手柄控制模式" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/glasses_side"/>
+
+    </RelativeLayout>
+
+    <include
+        android:layout_below="@id/guide_glasses_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/view_guide_control"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_color"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/guide_no_stick"
+            android:text="@string/guide_control_mode_no_stick"
+            android:textSize="16sp"
+            android:button="@null"
+            android:layout_weight="1"
+            android:textColor="@color/guide_grey_text_color"
+            android:gravity="left|center"
+            android:paddingLeft="16.67dp"
+            android:layout_marginRight="40dp"
+            android:layout_gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"  />
+
+        <RadioButton
+            android:id="@+id/guide_mode_next"
+            android:text="下一步"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:textColor="@color/guide_grey_text_color"
+            android:gravity="center|right"
+            android:layout_marginLeft="40dp"
+            android:button="@null"
+            android:checked="true"
+            android:drawableRight="@drawable/nav_icon_back2"
+            android:drawablePadding="10dp"
+            android:paddingRight="16.67dp"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+    </RadioGroup>
+
+</RelativeLayout>

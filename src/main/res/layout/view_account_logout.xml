@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_account_logout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:visibility="gone">
+
+    <Button
+        android:id="@+id/login"
+        style="@style/account_login_btn_style1"
+        android:layout_marginRight="20dip"
+        android:text="@string/login" />
+
+    <Button
+        android:id="@+id/reg"
+        style="@style/account_login_btn_style1"
+        android:layout_marginLeft="20dip"
+        android:text="@string/register" />
+</LinearLayout>

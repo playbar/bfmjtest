@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/mj_player_popview_bg">
+
+    <ListView
+        android:id="@+id/video_select_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@null"
+        android:divider="#33ffffff"
+        android:dividerHeight="1.5px"
+        android:listSelector="@drawable/player_listview_selector" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/video_index_select_view"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/index_layout"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/selected_text_color"
+                android:textSize="@dimen/btn_text_size"
+                android:gravity="center"
+                android:text=" "
+                android:layout_centerVertical="true"
+                android:id="@+id/index_tv"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/public_arrow_up"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/index_img"
+                />
+        </RelativeLayout>
+
+
+        <com.baofeng.mj.ui.online.view.SelectionGridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="4"
+            android:cacheColorHint="@null"
+            android:gravity="center"
+            android:listSelector="@drawable/player_listview_selector"
+            android:id="@+id/index_select_gridView" />
+    </LinearLayout>
+</RelativeLayout>

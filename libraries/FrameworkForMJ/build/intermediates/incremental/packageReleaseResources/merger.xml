@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="D:\MyWorks\BaofengMojing\libraries\FrameworkForMJ\res"/><source path="D:\MyWorks\BaofengMojing\libraries\FrameworkForMJ\build\generated\res\rs\release"/><source path="D:\MyWorks\BaofengMojing\libraries\FrameworkForMJ\build\generated\res\resValues\release"/></dataSet><dataSet config="release$Generated" generated="true"><source path="D:\MyWorks\BaofengMojing\libraries\FrameworkForMJ\build-types\release\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="D:\MyWorks\BaofengMojing\libraries\FrameworkForMJ\res"><file path="D:\MyWorks\BaofengMojing\libraries\FrameworkForMJ\res\values\colors.xml" qualifiers=""><color name="list_view_CacheColorHint">#00000000</color><color name="LightSteelBlue">#B0C4DE</color><color name="RoyalBlue">#4169E1</color><color name="text_tab_color">#ffffff</color><color name="set_text_color">#000000</color><color name="dialog_button_text">#333333</color></file><file path="D:\MyWorks\BaofengMojing\libraries\FrameworkForMJ\res\values\strings.xml" qualifiers=""><string name="size_medium">中</string><string name="VideoView_error_text_invalid_progressive_playback">This video isn\'t valid for streaming to this device.</string><string name="check_new_version_message">正在获取新版本信息 ....</string><string name="app_upgrade_cancel">取消</string><string name="check_new_version_null">未找到新版本信息，请稍后再试!</string><string name="yes">是</string><string name="check_new_version">发现新版本,确定更新吗?</string><string name="app_name">MJFramework</string><string name="size_big">大</string><string name="size_small">小</string><string name="no">否</string><string name="size_set_title">字体大小</string><string name="cancel">取消</string><string name="check_new_version_title">检查新版本</string><string name="progress_content_message">正在加载</string><string name="app_upgrade_download_sucess">新版本下载成功,开始安装.</string><string name="check_new_version_no_network">未找到网络连接，请设置后重试!</string><string name="app_upgrade_confirm">确定</string><string name="VideoView_error_text_unknown">Can\'t play this video.</string><string name="app_upgrade_download_fail">新版本下载失败，请稍后再试.</string><string name="check_new_version_latest">已经是最新版本!</string><string name="dialog_title">温馨提示</string><string name="login_method_url">http://www.chinapader.com/e/enews/userlogin.php</string><string name="check_new_version_exception">获取新版本信息出错，请稍后再试!</string></file><file path="D:\MyWorks\BaofengMojing\libraries\FrameworkForMJ\res\values\styles.xml" qualifiers=""><style name="ProgressBarStyle">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/text_tab_color</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style><style name="AppTheme" parent="android:Theme.Light"/><style name="StyleBarTitle">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/set_text_color</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style><style name="DialogTopMessage">
+        <item name="android:textColor">@color/text_tab_color</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">2.0</item>
+        <item name="android:layout_weight">1.0</item>
+    </style></file></source><source path="D:\MyWorks\BaofengMojing\libraries\FrameworkForMJ\build\generated\res\rs\release"/><source path="D:\MyWorks\BaofengMojing\libraries\FrameworkForMJ\build\generated\res\resValues\release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="D:\MyWorks\BaofengMojing\libraries\FrameworkForMJ\build-types\release\res"/></dataSet><mergedItems/></merger>

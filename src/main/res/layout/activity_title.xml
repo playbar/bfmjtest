@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/public_title_height"
+        android:background="@color/app_white_title_bg">
+
+        <TextView
+            android:id="@+id/title_name"
+            android:text="频道"
+            style="@style/app_title_text_style"/>
+
+        <ImageButton
+            android:id="@+id/title_close"
+            android:layout_width="@dimen/public_title_height"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/video_icon_close" />
+
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/title_view_grid"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@android:color/transparent"
+        android:numColumns="4"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:stretchMode="columnWidth"
+        android:layout_centerInParent="true" />
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="#99000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+	    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content">
+	        <ImageView 
+	            android:id="@+id/img_notify_logo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:src="@drawable/ic_launcher" />
+	    </LinearLayout>
+	    <LinearLayout 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_weight="1"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp">
+	        <TextView 
+	            android:id="@+id/txt_notify_title"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:singleLine="true"
+	            android:textSize="14dp"
+	            android:textColor="#fff"
+	            android:layout_marginBottom="6dp" />
+	        <TextView 
+	            android:id="@+id/txt_notify_content"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:singleLine="true"
+	            android:textColor="#7d7d7d"
+	            android:textSize="14dp" />
+	    </LinearLayout>
+	    
+    </LinearLayout>
+</LinearLayout>

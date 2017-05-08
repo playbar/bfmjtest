@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.baofeng.mj.ui.view.AppH5TitleBackView
+        android:id="@+id/h5_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/public_title_height"
+        android:background="@color/app_white_title_bg"/>
+
+    <WebView
+        android:id="@+id/h5_webview"
+        android:layout_below="@id/h5_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.baofeng.mj.ui.view.EmptyView
+        android:visibility="gone"
+        android:id="@+id/h5_empty_view"
+        android:layout_below="@id/h5_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.baofeng.mj.ui.view.CustomProgressView
+        android:id="@+id/h5_loading"
+        android:layout_centerInParent="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom"
+    android:background="@color/app_translucent_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/all_selections_title"
+            style="@style/panorama_detail_title_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="更新至234集"/>
+
+        <RadioGroup
+            android:id="@+id/all_selections_order_radiogroup"
+            android:layout_toRightOf="@+id/all_selections_title"
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/all_selections_positive_sequence"
+                android:textColor="@color/grey_purple_bg_color"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textSize="11.33sp"
+                android:gravity="center"
+                android:button="@null"
+                android:padding="10dp"
+                android:text="正序"/>
+
+            <RadioButton
+                android:id="@+id/all_selections_negative_sequence"
+                android:textColor="@color/grey_purple_bg_color"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:textSize="11.33sp"
+                android:gravity="center"
+                android:button="@null"
+                android:padding="10dp"
+                android:text="倒序"/>
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/all_selection_back"
+            android:layout_alignParentRight="true"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:padding="15dp"
+            android:layout_gravity="right"
+            android:layout_centerVertical="true"
+            android:src="@drawable/video_icon_close"
+            android:gravity="center"/>
+    </RelativeLayout>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <include
+            layout="@layout/layout_selection_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" />
+
+    </HorizontalScrollView>
+    <android.support.v4.view.ViewPager
+        android:background="@color/white"
+        android:id="@+id/all_selections_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="240dp" />
+
+</LinearLayout>

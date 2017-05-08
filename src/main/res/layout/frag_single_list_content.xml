@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/frag_choiceness_content"
+        android:id="@+id/single_list_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/single_list_no_network_tab_layout"
+        layout="@layout/view_no_network_tab"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="33.3dp"/>
+
+    <RelativeLayout
+        android:id="@+id/single_list_filter_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="筛选"
+            android:textSize="15sp"
+            android:textColor="@color/grey_purple_bg_color"
+            android:layout_centerVertical="true"/>
+
+        <CheckBox
+            android:id="@+id/single_list_filter_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:button="@drawable/tab_arrow"
+            android:background="@null"
+            android:layout_alignParentRight="true"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.33dp"
+            android:layout_below="@id/single_list_filter_arrow"
+            android:background="@color/divider_color" />
+    </RelativeLayout>
+
+    <com.baofeng.mj.ui.view.CustomProgressView
+        android:id="@+id/single_list_loading"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <com.baofeng.mj.ui.view.EmptyView
+        android:visibility="gone"
+        android:id="@+id/single_list_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
+
+

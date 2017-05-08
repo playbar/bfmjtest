@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.handmark.pulltorefresh.library.PullToRefreshScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/choiceness_pulltorefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:paddingTop="48dp"
+    android:scrollbars="none"
+    ptr:ptrAnimationStyle="flip"
+    ptr:ptrHeaderBackground="@color/app_pulltorefresh_green"
+    ptr:ptrMode="disabled">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/game_detail_act_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:paddingTop="10dp"
+            android:src="@drawable/img_default_banner" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/game_detail_image"
+                android:layout_width="66.7dp"
+                android:layout_height="66.7dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_default_4n" />
+
+            <TextView
+                android:id="@+id/game_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="15.6dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6.7dp"
+                android:layout_toRightOf="@id/game_detail_image"
+                android:includeFontPadding="false"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/title_text_size" />
+
+            <TextView
+                android:id="@+id/game_detail_score"
+                android:layout_width="wrap_content"
+                android:layout_height="15.6dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="6.7dp"
+                android:layout_toRightOf="@id/game_detail_name"
+                android:includeFontPadding="false"
+                android:textColor="@color/auxiliary_yellow_color"
+                android:textSize="@dimen/title_text_size" />
+
+            <TextView
+                android:id="@+id/game_detail_download_no"
+                android:layout_width="wrap_content"
+                android:layout_height="11dp"
+                android:layout_below="@id/game_detail_name"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/game_detail_image"
+                android:includeFontPadding="false"
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/warn_text_size" />
+
+            <TextView
+                android:id="@+id/game_detail_size"
+                android:layout_width="wrap_content"
+                android:layout_height="11dp"
+                android:layout_below="@id/game_detail_name"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/game_detail_download_no"
+                android:includeFontPadding="false"
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/warn_text_size" />
+
+            <TextView
+                android:id="@+id/game_detail_head_control"
+                android:layout_width="wrap_content"
+                android:layout_height="13.3dp"
+                android:layout_below="@id/game_detail_download_no"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/game_detail_image"
+                android:background="@drawable/corner_yellow_with_trans"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="6.6dp"
+                android:paddingRight="6.6dp"
+                android:textColor="@color/auxiliary_yellow_color"
+                android:textSize="9.4sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/game_detail_source"
+                android:layout_width="wrap_content"
+                android:layout_height="13.3dp"
+                android:layout_below="@id/game_detail_download_no"
+                android:layout_marginLeft="3.3dp"
+                android:layout_toRightOf="@id/game_detail_head_control"
+                android:background="@drawable/corner_blue_with_trans"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="6.6dp"
+                android:paddingRight="6.6dp"
+                android:textColor="@color/auxiliary_blue_color"
+                android:textSize="9.4sp" />
+
+            <TextView
+                android:id="@+id/game_detail_noAd"
+                android:layout_width="wrap_content"
+                android:layout_height="13.3dp"
+                android:layout_below="@id/game_detail_download_no"
+                android:layout_marginLeft="3.3dp"
+                android:layout_toRightOf="@id/game_detail_source"
+                android:background="@drawable/laber_wuguanggao"
+                android:includeFontPadding="false"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/game_detail_type"
+                android:layout_width="wrap_content"
+                android:layout_height="13.4dp"
+                android:layout_below="@id/game_detail_download_no"
+                android:layout_marginLeft="3.3dp"
+                android:layout_toRightOf="@id/game_detail_noAd"
+                android:background="@drawable/corner_red_with_trans"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:paddingLeft="6.6dp"
+                android:paddingRight="6.6dp"
+                android:textColor="@color/auxiliary_red_color"
+                android:textSize="9.4sp" />
+
+            <Button
+                android:id="@+id/game_detail_btn"
+                android:layout_width="56.7dp"
+                android:layout_height="26.7dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/corner_blue_bg"
+                android:text="下载"
+                android:textColor="@color/theme_auxiliary_color"
+                android:textSize="@dimen/btn_text_size" />
+        </RelativeLayout>
+
+        <include layout="@layout/view_horizontal_line"></include>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/game_detail_banner_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="vertical"></LinearLayout>
+
+            <ImageView
+                android:id="@+id/game_start_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/video_icon_play"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <include
+            android:id="@+id/banner_line"
+            layout="@layout/view_horizontal_line"></include>
+
+        <LinearLayout
+            android:id="@+id/game_support_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="硬件适配"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/btn_text_size" />
+
+            <TextView
+                android:id="@+id/game_support_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/theme_main_color"
+                android:textSize="@dimen/content_text_size" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/game_support_line"
+            layout="@layout/view_horizontal_line"></include>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="更新内容"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/btn_text_size" />
+
+            <TextView
+                android:id="@+id/update_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/content_text_size" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/line_1"
+            layout="@layout/view_horizontal_line"
+            android:visibility="gone"></include>
+
+        <LinearLayout
+            android:id="@+id/play_feature_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="特色玩法"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/btn_text_size" />
+
+            <TextView
+                android:id="@+id/game_play_feture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/content_text_size" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/feature_line"
+            layout="@layout/view_horizontal_line"></include>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="应用介绍"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/title_text_size" />
+
+            <TextView
+                android:id="@+id/game_detail_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text=""
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/btn_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/des_hide_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/des_hide"
+                android:layout_width="20dp"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/public_arrow_down"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <include layout="@layout/view_horizontal_line"></include>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/comment_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_alignParentLeft="true"
+                android:includeFontPadding="false"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/btn_text_size" />
+
+            <TextView
+                android:id="@+id/comment_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/comment_tag"
+                android:includeFontPadding="false"
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/content_text_size" />
+
+            <Button
+                android:id="@+id/write_comment"
+                android:layout_width="56.7dp"
+                android:layout_height="26.7dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/corner_blue_bg"
+                android:includeFontPadding="false"
+                android:textColor="@color/theme_auxiliary_color"
+                android:textSize="@dimen/btn_text_size" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/comment_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/comment_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comment_list_layout"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/more_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="21.7dp"
+                android:textColor="@color/prompt_color"
+                android:textSize="@dimen/btn_text_size" />
+
+            <TextView
+                android:id="@+id/comment_more_tag1"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginBottom="21.7dp"
+                android:layout_marginLeft="6.6dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/more_tag"
+                android:background="@drawable/public_arrow_right" />
+        </LinearLayout>
+    </LinearLayout>
+</com.handmark.pulltorefresh.library.PullToRefreshScrollView>

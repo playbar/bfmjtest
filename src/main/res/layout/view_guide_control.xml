@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/guide_control_mode_mix_layout"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingLeft="16.67dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:layout_margin="16.67dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/guide_grey_purple_corner_bg_color">
+
+        <ImageView
+            android:id="@+id/guide_control_mix_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/guide_control_mode_mix"/>
+
+        <TextView
+            android:id="@+id/guide_control_mix_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/dark_grey_purple_bg_color"
+            android:layout_marginLeft="16.67dp"
+            android:paddingTop="3.33dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/guide_control_mix_icon"
+            android:text="@string/guide_control_mode_mix" />
+
+        <TextView
+            android:id="@+id/guide_control_mix_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.67dp"
+            android:layout_marginLeft="16.67dp"
+            android:layout_toRightOf="@id/guide_control_mix_icon"
+            android:layout_below="@id/guide_control_mix_text"
+            android:textColor="@color/grey_purple_bg_color"
+            android:textStyle="bold"
+            android:textSize="10.67sp"
+            android:text="@string/guide_control_mode_mix_tips" />
+
+        <RadioButton
+            android:id="@+id/guide_control_mix_radiobtn"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="16.67dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/guide_control_mode" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/guide_control_mode_pure_layout"
+        android:layout_below="@id/guide_control_mode_mix_layout"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingLeft="16.67dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:layout_margin="16.67dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/guide_grey_purple_corner_bg_color">
+
+        <ImageView
+            android:id="@+id/guide_control_pure_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/guide_control_mode_pure"/>
+
+        <TextView
+            android:id="@+id/guide_control_pure_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/dark_grey_purple_bg_color"
+            android:layout_marginLeft="16.67dp"
+            android:paddingTop="3.33dp"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/guide_control_pure_icon"
+            android:text="@string/guide_control_mode_pure" />
+
+        <TextView
+            android:id="@+id/guide_control_pure_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6.67dp"
+            android:layout_marginLeft="16.67dp"
+            android:layout_toRightOf="@id/guide_control_pure_icon"
+            android:layout_below="@id/guide_control_pure_text"
+            android:textColor="@color/grey_purple_bg_color"
+            android:textStyle="bold"
+            android:textSize="10.67sp"
+            android:text="@string/guide_control_mode_pure_tips" />
+
+        <RadioButton
+            android:id="@+id/guide_control_pure_radiobtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:button="@drawable/guide_control_mode"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="16.67dp"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

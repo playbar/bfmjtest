@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_backgroud_pic"
+     android:background="@color/mj_color_white"
+     android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/glasses_official_layout"
+        android:layout_width="match_parent"
+        android:layout_height="53.3dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="16.6dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/bg_color"
+        android:gravity="center_vertical"
+        android:paddingRight="16.6dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/glasses_cur_selected"
+            android:singleLine="true"
+            android:layout_marginRight="77dp"
+            android:text="" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/prompt_color"
+            android:textSize="11.33sp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_below="@+id/glasses_cur_selected"
+            android:text="选择你在使用的眼镜" />
+
+        <TextView
+            android:id="@+id/glasses_setting"
+            android:layout_width="70dp"
+            android:layout_height="26.67dp"
+            android:textSize="11.33dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/corner_purple_bg"
+            android:textColor="@color/theme_main_color"
+            android:gravity="center"
+            android:layout_marginTop="5.6dp"
+            android:text="@string/glasses_adv_setting" />
+
+    </RelativeLayout>
+
+
+       <com.baofeng.mj.ui.view.GlassesChooseView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+           android:layout_weight="1"
+           android:id="@+id/glasses_choose_view"
+            android:layout_below="@id/glasses_official_layout"
+            ></com.baofeng.mj.ui.view.GlassesChooseView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/glasses_button_shader"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16.67dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/glasses_scan"
+        android:text="@string/guide_glas_scan"
+        android:textSize="13.3sp"
+        android:textColor="@color/theme_main_color"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/enter_icon_scan"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="@string/guide_glas_scan_tips"
+        android:textSize="9.2sp"
+        android:textColor="@color/prompt_color"
+        android:gravity="center"
+        android:layout_marginTop="7dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+   </LinearLayout>
+
+</LinearLayout>
+
+

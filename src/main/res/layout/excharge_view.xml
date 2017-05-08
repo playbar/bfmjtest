@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/charge_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEDED"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="46.7dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:text="手机号"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/btn_text_size" />
+
+                <com.baofeng.mj.ui.view.ClearableEditText
+                    android:id="@+id/excharge_tel"
+                    style="@style/common_edit_text_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/input_phone_number"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"></include>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="46.7dp"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tv_excharge_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="10dp"
+                    android:text="兑换码"
+                    android:textColor="@color/title_color"
+                    android:textSize="@dimen/btn_text_size" />
+
+                <com.baofeng.mj.ui.view.ClearableEditText
+                    android:id="@+id/excharge_no"
+                    style="@style/common_edit_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_excharge_no"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/input_exchange_code"
+                    android:maxLength="16"
+                    android:singleLine="true" />
+
+            </RelativeLayout>
+
+            <include
+                layout="@layout/view_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"></include>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/exchange_confirm_btn"
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="26.7dp"
+            android:layout_marginTop="26.7dp"
+            android:background="@drawable/corner_purple_bg"
+            android:gravity="center"
+            android:text="确认兑换"
+            android:textColor="@color/theme_main_color"
+            android:textSize="@dimen/btn_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="温馨提示"
+            android:textColor="@color/prompt_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6.7dp"
+            android:paddingLeft="10dp"
+            android:text="· 兑换码为16位数字或密码,目前仅用于活动赠送,不单独售卖"
+            android:textColor="@color/prompt_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6.7dp"
+            android:paddingLeft="10dp"
+            android:text="· 兑换码用于兑换魔豆,魔豆存在有效期,请在有效期内使用"
+            android:textColor="@color/prompt_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="· 输入兑换码,魔豆立即到账,可在个人主页中查询"
+            android:textColor="@color/prompt_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

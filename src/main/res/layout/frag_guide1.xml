@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/guide_purple_bg"
+	android:fitsSystemWindows="true">
+
+	<ImageView
+		android:id="@+id/guide_imageview"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="133.33dp"
+		android:layout_centerHorizontal="true"
+		android:background="@drawable/glasses_positive"/>
+
+
+	<TextView
+		android:id="@+id/guide_tv1"
+		android:layout_marginTop="28dp"
+		android:padding="5dp"
+		android:layout_below="@id/guide_imageview"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="@string/guide_tips1"
+		android:layout_centerHorizontal="true"
+		android:textColor="@android:color/white"
+		android:textSize="16sp" />
+
+	<TextView
+		android:id="@+id/guide_tv2"
+		android:padding="5dp"
+		android:layout_below="@id/guide_tv1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="@string/guide_tips2"
+		android:layout_centerHorizontal="true"
+		android:textColor="@android:color/white"
+		android:textSize="16sp" />
+
+	<TextView
+		android:id="@+id/guide_tv3"
+		android:padding="5dp"
+		android:layout_below="@id/guide_tv2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:text="@string/guide_tips3"
+		android:layout_centerHorizontal="true"
+		android:textColor="@android:color/white"
+		android:textSize="16sp" />
+
+
+	<TextView
+		android:id="@+id/have_glass_tv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:textColor="@android:color/white"
+		android:textSize="16sp"
+		android:layout_marginTop="@dimen/guide_no_glass_marinTop"
+		android:drawableRight="@drawable/guide_next_arrow"
+		android:drawablePadding="10dp"
+		android:layout_above="@+id/guide_next_btn"
+		android:layout_marginBottom="40dp"
+		android:visibility="gone"
+		/>
+
+	<Button
+		android:id="@+id/guide_next_btn"
+		android:layout_alignParentBottom="true"
+		android:textColor="@android:color/white"
+		android:text="@string/guide_next"
+		android:textSize="16sp"
+		android:background="@color/guide_purple_btn"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:visibility="gone"/>
+
+
+	<RelativeLayout
+		android:id="@+id/bottom_layout"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:background="@color/guide_purple_btn"
+		android:layout_alignParentBottom="true"
+		>
+
+		<TextView
+			android:id="@+id/no_glass_tv"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="16dp"
+			android:textColor="@android:color/white"
+			android:textSize="16sp"
+			android:text="没有眼镜"
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true"
+			/>
+
+
+		<TextView
+			android:id="@+id/guide_select_tv"
+			android:textColor="@android:color/white"
+			android:text="选择眼镜"
+			android:textSize="16sp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginRight="16dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			/>
+	</RelativeLayout>
+
+
+</RelativeLayout>

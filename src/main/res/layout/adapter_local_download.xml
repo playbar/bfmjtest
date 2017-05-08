@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="75dp"
+        android:layout_height="55dp">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_weight="1.0"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:text="@null" />
+
+        <ProgressBar
+            android:id="@+id/pb_downloading"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="10dp"
+            android:max="100"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/local_download_progressbar" />
+
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/prompt_color"
+            android:textSize="12sp"
+            android:text="@null" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_download"
+        android:layout_width="55dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:background="@drawable/corner_downloading_bg"
+        android:textColor="#3881AE"
+        android:textSize="14sp"
+        android:text="@null" />
+
+</LinearLayout>

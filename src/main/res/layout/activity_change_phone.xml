@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_backgroud_pic"
+    android:orientation="vertical">
+
+    <com.baofeng.mj.ui.view.AppTitleBackView
+        android:id="@+id/bind_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_white_title_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/login_mobile_layout"
+            android:layout_width="match_parent"
+            android:layout_height="46.7dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/login_mobile_pre"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="手机号"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/btn_text_size" />
+
+            <com.baofeng.mj.ui.view.ClearableEditText
+                android:id="@+id/tel_num"
+                style="@style/common_edit_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/login_mobile_pre"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:inputType="number"
+                android:maxEms="11"
+                android:maxLength="11"
+                android:paddingLeft="10dp"
+                android:singleLine="true"/>
+        </RelativeLayout>
+
+        <include layout="@layout/view_line_divider_with_margin"></include>
+
+        <LinearLayout
+            android:id="@+id/login_code_layout"
+            android:layout_width="match_parent"
+            android:layout_height="46.7dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/login_code_pre"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="校验码"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/btn_text_size" />
+
+            <EditText
+                android:id="@+id/verify_code"
+                style="@style/common_edit_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入短信校验码"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingLeft="10dp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/send_code"
+                android:layout_width="93.3dp"
+                android:layout_height="26.7dp"
+                android:background="@drawable/send_msg_bg_selector"
+                android:gravity="center"
+                android:text="@string/get_short_message_for_free"
+                android:textColor="@drawable/send_msg_txt_selector"
+                android:textSize="@dimen/content_text_size" />
+        </LinearLayout>
+
+        <include layout="@layout/view_horizontal_line"></include>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="17dp"
+            android:gravity="bottom"
+            android:paddingBottom="10dp"
+            android:text="*每个手机号每天只发送5条短信！"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/content_text_size" />
+
+        <TextView
+            android:id="@+id/bind_sure"
+            android:layout_width="match_parent"
+            android:layout_height="36.7dp"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/corner_login_btn_bg"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/btn_text_size" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <com.handmark.pulltorefresh.library.ObservableScrollView
+        android:id="@+id/sv_main_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.baofeng.mj.ui.view.AccountHead
+                android:id="@+id/account_head_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View style="@style/public_account_list_high_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/account_my_device_relative"
+                style="@style/public_account_list_style"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/account_my_device_pre"
+                    style="@style/public_account_list_icon_style"
+                    android:src="@drawable/my_icon_equipment" />
+
+                <TextView
+                    android:id="@+id/account_my_device_tag"
+                    style="@style/public_account_list_text_style"
+                    android:layout_toRightOf="@id/account_my_device_pre"
+                    android:text="我的设备"
+                    />
+
+                <ImageView style="@style/public_account_list_arrow_style" />
+
+            </RelativeLayout>
+
+            <View style="@style/public_account_list_line_style"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/account_play_history_relative"
+                style="@style/public_account_list_style">
+
+                <ImageView
+                    android:id="@+id/account_play_history_pre"
+                    style="@style/public_account_list_icon_style"
+                    android:src="@drawable/my_icon_time" />
+
+                <TextView
+                    android:id="@+id/account_record_history_pre"
+                    style="@style/public_account_list_text_style"
+                    android:layout_toRightOf="@id/account_play_history_pre" />
+
+                <ImageView style="@style/public_account_list_arrow_style" />
+
+            </RelativeLayout>
+
+            <View style="@style/public_account_list_line_style"
+                  android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/account_my_subscribe_relative"
+                style="@style/public_account_list_style"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/account_my_subscribe_pre"
+                    style="@style/public_account_list_icon_style"
+                    android:src="@drawable/my_icon_read" />
+
+                <TextView
+                    android:id="@+id/my_sub"
+                    style="@style/public_account_list_text_style"
+                    android:layout_toRightOf="@id/account_my_subscribe_pre" />
+
+                <ImageView style="@style/public_account_list_arrow_style" />
+
+            </RelativeLayout>
+
+            <View
+                style="@style/public_account_list_line_style"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/account_my_mission_relative"
+                style="@style/public_account_list_style"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/account_my_mission_pre"
+                    style="@style/public_account_list_icon_style"
+                    android:src="@drawable/my_icon_mission" />
+
+                <TextView
+                    android:id="@+id/my_task"
+                    style="@style/public_account_list_text_style"
+                    android:layout_toRightOf="@id/account_my_mission_pre" />
+
+                <ImageView style="@style/public_account_list_arrow_style" />
+
+            </RelativeLayout>
+
+            <View style="@style/public_account_list_high_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/account_modou_recharge_relative"
+                style="@style/public_account_list_style">
+
+                <ImageView
+                    android:id="@+id/account_modou_recharge_pre"
+                    style="@style/public_account_list_icon_style"
+                    android:src="@drawable/my_icon_pay" />
+
+                <TextView
+                    style="@style/public_account_list_text_style"
+                    android:layout_toRightOf="@id/account_modou_recharge_pre"
+                    android:text="魔币充值" />
+
+                <ImageView style="@style/public_account_list_arrow_style" />
+
+            </RelativeLayout>
+
+            <View style="@style/public_account_list_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/account_modou_shop_relative"
+                style="@style/public_account_list_style">
+
+                <ImageView
+                    android:id="@+id/account_modou_shop_pre"
+                    style="@style/public_account_list_icon_style"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/my_icon_shop" />
+
+                <TextView
+                    style="@style/public_account_list_text_style"
+                    android:layout_toRightOf="@id/account_modou_shop_pre"
+                    android:text="魔镜商城" />
+
+                <ImageView style="@style/public_account_list_arrow_style" />
+
+            </RelativeLayout>
+
+            <View style="@style/public_account_list_high_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/account_setting_relative"
+                style="@style/public_account_list_style">
+
+                <ImageView
+                    android:id="@+id/account_setting_pre"
+                    style="@style/public_account_list_icon_style"
+                    android:src="@drawable/my_icon_set" />
+
+                <TextView
+                    style="@style/public_account_list_text_style"
+                    android:layout_toRightOf="@id/account_setting_pre"
+                    android:text="设置" />
+
+                <ImageView style="@style/public_account_list_arrow_style" />
+
+            </RelativeLayout>
+
+            <View style="@style/public_account_list_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/account_scan_relative"
+                style="@style/public_account_list_style">
+
+                <ImageView
+                    android:id="@+id/account_scan_pre"
+                    style="@style/public_account_list_icon_style"
+                    android:src="@drawable/my_icon_scan" />
+
+                <TextView
+                    style="@style/public_account_list_text_style"
+                    android:layout_toRightOf="@id/account_scan_pre"
+                    android:text="扫一扫" />
+
+                <ImageView style="@style/public_account_list_arrow_style" />
+
+            </RelativeLayout>
+
+            <View style="@style/public_account_list_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/account_help_relative"
+                style="@style/public_account_list_style">
+
+                <ImageView
+                    android:id="@+id/account_help_pre"
+                    style="@style/public_account_list_icon_style"
+                    android:src="@drawable/my_icon_help" />
+
+                <TextView
+                    style="@style/public_account_list_text_style"
+                    android:layout_toRightOf="@id/account_help_pre"
+                    android:text="帮助与反馈" />
+
+                <TextView
+                    android:id="@+id/has_content"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/help_next"
+                    android:background="@drawable/corner_red_bg"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/help_next"
+                    style="@style/public_account_list_arrow_style" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/v_experience_report_divider"
+                style="@style/public_account_list_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/account_experience_relative"
+                style="@style/public_account_list_style">
+
+                <ImageView
+                    android:id="@+id/account_experience_pre"
+                    style="@style/public_account_list_icon_style"
+                    android:src="@drawable/my_icon_question" />
+
+                <TextView
+                    style="@style/public_account_list_text_style"
+                    android:layout_toRightOf="@id/account_experience_pre"
+                    android:text="体验调查" />
+
+                <ImageView style="@style/public_account_list_arrow_style" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/bg_color"></View>
+        </LinearLayout>
+
+    </com.handmark.pulltorefresh.library.ObservableScrollView>
+
+    <ImageView
+        android:id="@+id/iv_account_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/public_bg_nav" />
+
+    <com.baofeng.mj.ui.view.AppTitleBackView
+        android:id="@+id/account_title_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>
+

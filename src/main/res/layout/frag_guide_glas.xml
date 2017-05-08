@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_backgroud_pic"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/guide_glasses_layout"
+        android:layout_width="match_parent"
+        android:layout_height="156.67dp"
+        android:background="@color/guide_purple_bg" >
+
+        <TextView
+            android:id="@+id/guide_glasses_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.6"
+            android:paddingLeft="16.67dp"
+            android:paddingBottom="33dp"
+            android:text="选择眼镜" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/glasses_side"/>
+
+    </RelativeLayout>
+
+    <com.baofeng.mj.ui.view.GlassesChooseView
+        android:id="@+id/guide_glasses_listview"
+        android:layout_below="@id/guide_glasses_layout"
+        android:layout_marginTop="13.33dp"
+        android:paddingBottom="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <LinearLayout
+        android:id="@+id/guide_next_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/divider_color">
+
+        <TextView
+            android:id="@+id/guide_no_glasses"
+            android:layout_width="0.0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1.0"
+            android:paddingLeft="16.67dp"
+            android:gravity="center_vertical|left"
+            android:text="没有眼镜"
+            android:textSize="16sp"
+            android:textColor="@color/title_color"/>
+
+        <TextView
+            android:id="@+id/guide_glasses_next"
+            android:layout_width="0.0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1.0"
+            android:paddingRight="16.67dp"
+            android:gravity="center_vertical|right"
+            android:text="下一步"
+            android:textSize="16sp"
+            android:textColor="@color/prompt_color"
+            android:drawableRight="@drawable/my_right_arrow"
+            android:drawablePadding="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/guide_scan_glas_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/guide_next_layout"
+        android:background="@drawable/button_shader"
+        android:padding="16.67dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/guide_scan_glas"
+            android:text="@string/guide_glas_scan"
+            android:textSize="13.33sp"
+            android:textColor="@color/theme_main_color"
+            android:drawableLeft="@drawable/enter_icon_scan"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="3.33dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/guide_scan_glas_tips"
+            android:text="@string/guide_glas_scan_tips"
+            android:textSize="9.33sp"
+            android:layout_marginTop="6.67dp"
+            android:textColor="@color/prompt_color"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/black_layer"
+        android:background="@color/black_cc"/>
+
+</RelativeLayout>
